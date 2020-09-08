@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/DiagnOSU/static/css/main.d1d148f3.chunk.css",
+    "main.js": "/DiagnOSU/static/js/main.ca9c3768.chunk.js",
+    "main.js.map": "/DiagnOSU/static/js/main.ca9c3768.chunk.js.map",
+    "runtime-main.js": "/DiagnOSU/static/js/runtime-main.df422ff6.js",
+    "runtime-main.js.map": "/DiagnOSU/static/js/runtime-main.df422ff6.js.map",
+    "static/js/2.74c953aa.chunk.js": "/DiagnOSU/static/js/2.74c953aa.chunk.js",
+    "static/js/2.74c953aa.chunk.js.map": "/DiagnOSU/static/js/2.74c953aa.chunk.js.map",
+    "index.html": "/DiagnOSU/index.html",
+    "precache-manifest.cc9adb5051971e2ebe6a38b59d0bb910.js": "/DiagnOSU/precache-manifest.cc9adb5051971e2ebe6a38b59d0bb910.js",
+    "service-worker.js": "/DiagnOSU/service-worker.js",
+    "static/css/main.d1d148f3.chunk.css.map": "/DiagnOSU/static/css/main.d1d148f3.chunk.css.map",
+    "static/js/2.74c953aa.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.74c953aa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/DiagnOSU/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df422ff6.js",
+    "static/js/2.74c953aa.chunk.js",
+    "static/css/main.d1d148f3.chunk.css",
+    "static/js/main.ca9c3768.chunk.js"
+  ]
+}
