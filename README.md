@@ -24,5 +24,5 @@ Goals:
 Demo user input:
 
 - Hi, I think I have covid!
-- I have a cough, and my temperature is running a bit high,
-- Ok I will head to my closest testing center
+- I have a cough, and my temperature is running a bit high.
+- Ok I will head to my closest testing center.
