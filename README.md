@@ -23,3 +23,9 @@ Run `npm install` when before running this project for the first time or after p
 Run `npm run deploy` to deploy changes to Github pages. (You may need to be logged in to Github as Trevor).
 
 Run `npm start` to run application locally.
+
+Demo user input:
+
+- Hi, I think I have covid!
+- I have a cough, and my temperature is running a bit high.
+- Ok I will head to my closest testing center.
