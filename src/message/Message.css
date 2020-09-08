@@ -1,0 +1,11 @@
+.message {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.message-line {
+    display: block;
+}
