@@ -1,0 +1,170 @@
+{
+  "intents": [
+    {
+      "intent": "CoronavirusShouldIGetTested",
+      "examples": [
+        {
+          "text": "Do I need to be tested for corona?"
+        },
+        {
+          "text": "hey do i need a test for the covid-19?"
+        },
+        {
+          "text": "how do i know if i need a test for the rona?"
+        },
+        {
+          "text": "should i get a covid test?"
+        },
+        {
+          "text": "Should I get tested for Coronavirus?"
+        }
+      ],
+      "description": "When the user asks if they should get a Coronavirus test"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "CoronavirusSymptom",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Cough",
+          "synonyms": [
+            "Difficulty Breathing"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Fever",
+          "synonyms": [
+            "chills"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "loss of taste",
+          "synonyms": [
+            "loss of smell",
+            "no smell",
+            "no taste"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nausea",
+          "synonyms": [
+            "Vomiting"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Shortness of breath",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Coronavirus test",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Are you feeling sick?"
+              },
+              {
+                "text": "How are you feeling?"
+              },
+              {
+                "text": "Are you feeling any symptoms of coronavirus?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#CoronavirusShouldIGetTested",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You should get tested"
+              },
+              {
+                "text": "I recommend you get tested for Coronavirus"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@CoronavirusSymptom",
+      "dialog_node": "node_8_1600206125680",
+      "previous_sibling": "Anything else"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I can help you find information on the Coronavirus pandemic. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
