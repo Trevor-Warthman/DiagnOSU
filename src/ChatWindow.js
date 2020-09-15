@@ -2,6 +2,7 @@ import React from "react";
 import {ChatDialog} from "./ChatDialog";
 import {ChatInputForm} from "./ChatInputForm";
 import "./ChatWindow.css";
+import Header from "./ChatWindowHeader"
 
 export class ChatWindow extends React.Component {
 
@@ -38,10 +39,13 @@ export class ChatWindow extends React.Component {
 
     render() {
         return (
-            <div className="chat-window">
-                <ChatDialog ref={this.chatDialog}/>
-                <ChatInputForm onSubmit={this.submitMessage}/>
-            </div>
+            <div> 
+                <Header />
+                <div className="chat-window">
+                    <ChatDialog ref={this.chatDialog}/>
+                    <ChatInputForm onSubmit={this.submitMessage}/>
+                </div>
+            </div>  
         );
     }
 }
