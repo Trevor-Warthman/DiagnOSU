@@ -1,8 +1,6 @@
 # diagnOSU
 Covid-19 Medical Chat Bot
 
-Hi friends
-
 Setup:
 
 NPM Github Setup:
@@ -24,8 +22,11 @@ Run `npm run deploy` to deploy changes to Github pages. (You may need to be logg
 
 Run `npm start` to run application locally, and visit the app at http://localhost:3000.
 
-Demo user input:
+Demo Script:
 
-- Hi, I think I have covid!
-- I have a cough, and my temperature is running a bit high.
-- Ok I will head to my closest testing center.
+  Hi We are the group diagnOSU and we are working on a COVID chat bot. It will work something like this.
+
+  Chat input:
+    - Hi, I think I have covid!
+    - I have a cough, and my temperature is running a bit high.
+    - Ok I will head to my closest testing center.
