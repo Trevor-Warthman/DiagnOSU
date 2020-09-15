@@ -2,7 +2,8 @@ import React from "react";
 import {ChatDialog} from "./ChatDialog";
 import {ChatInputForm} from "./ChatInputForm";
 import "./ChatWindow.css";
-import Header from "./ChatWindowHeader"
+import Header from "./ChatWindowHeader";
+import ChatWindowSidebar from "./ChatWindowSidebar";
 
 export class ChatWindow extends React.Component {
 
@@ -41,6 +42,11 @@ export class ChatWindow extends React.Component {
         return (
             <div> 
                 <Header />
+                <ChatWindowSidebar width ={300} height ={"100vh"}>
+                    <h1> TODO put link or something here </h1>
+                    <h1> TODO put link or something here </h1>
+                    <h1> TODO put link or something here </h1>
+                </ChatWindowSidebar>
                 <div className="chat-window">
                     <ChatDialog ref={this.chatDialog}/>
                     <ChatInputForm onSubmit={this.submitMessage}/>
