@@ -20,6 +20,27 @@
         }
       ],
       "description": "When the user asks if they should get a Coronavirus test"
+    },
+    {
+      "intent": "EmergencyWarningSignsCOVID",
+      "examples": [
+        {
+          "text": "I am confused most of the time"
+        },
+        {
+          "text": "I am having a constant pain in my chest"
+        },
+        {
+          "text": "I am not able to breathe completely"
+        },
+        {
+          "text": "I am not able to stay awake"
+        },
+        {
+          "text": "My face looks bluish"
+        }
+      ],
+      "description": "Check for emergency warning signs covid"
     }
   ],
   "entities": [
@@ -63,6 +84,46 @@
         }
       ],
       "fuzzy_match": true
+    },
+    {
+      "entity": "CovidEmergencySigns",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bluish face",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bluish lips",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Confusion",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Persistent Pain in the chest",
+          "synonyms": [
+            "Pressure in the chest"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Trouble Breathing",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Unable to wake up",
+          "synonyms": [
+            "Unable to stay awake"
+          ]
+        }
+      ],
+      "fuzzy_match": true
     }
   ],
   "metadata": {
@@ -97,8 +158,28 @@
       },
       "conditions": "#CoronavirusShouldIGetTested",
       "dialog_node": "Anything else",
-      "previous_sibling": "Welcome",
+      "previous_sibling": "node_2_1600377384054",
       "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Emergency Signs",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please visit the nearest hospital or call 911, you may be a victim of COVID-19. Better late than never!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#EmergencyWarningSignsCOVID",
+      "dialog_node": "node_2_1600377384054",
+      "previous_sibling": "Welcome"
     },
     {
       "type": "standard",
