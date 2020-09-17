@@ -32,7 +32,7 @@ export class ChatDialog extends React.Component {
 
     render() {
         return (
-            <div data-testid="chat-dialog" className="chat-dialog">
+            <div className="chat-dialog">
                 {this.state.messages.map(c => this.createMessageElement(c))}
             </div>
         );
