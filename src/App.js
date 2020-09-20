@@ -4,8 +4,9 @@ import './App.css';
 import {ChatWindow} from "./ChatWindow";
 function App() {
   return (
-    <div className="App">
-        <ChatWindow />
+    <div data-testid="app-div" className="App">
+        <ChatWindow/>
+        <img src={logo} alt="React Logo"/>
     </div>
   );
 }
