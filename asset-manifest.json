@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/DiagnOSU/static/css/main.f9d2f038.chunk.css",
-    "main.js": "/DiagnOSU/static/js/main.75185dc6.chunk.js",
-    "main.js.map": "/DiagnOSU/static/js/main.75185dc6.chunk.js.map",
+    "main.css": "/DiagnOSU/static/css/main.8811299c.chunk.css",
+    "main.js": "/DiagnOSU/static/js/main.1790a902.chunk.js",
+    "main.js.map": "/DiagnOSU/static/js/main.1790a902.chunk.js.map",
     "runtime-main.js": "/DiagnOSU/static/js/runtime-main.df422ff6.js",
     "runtime-main.js.map": "/DiagnOSU/static/js/runtime-main.df422ff6.js.map",
-    "static/js/2.01e99706.chunk.js": "/DiagnOSU/static/js/2.01e99706.chunk.js",
-    "static/js/2.01e99706.chunk.js.map": "/DiagnOSU/static/js/2.01e99706.chunk.js.map",
+    "static/js/2.7121e6b7.chunk.js": "/DiagnOSU/static/js/2.7121e6b7.chunk.js",
+    "static/js/2.7121e6b7.chunk.js.map": "/DiagnOSU/static/js/2.7121e6b7.chunk.js.map",
     "index.html": "/DiagnOSU/index.html",
-    "precache-manifest.f95e27abd49b8b72cac813793e37c7f3.js": "/DiagnOSU/precache-manifest.f95e27abd49b8b72cac813793e37c7f3.js",
+    "precache-manifest.6b87cd8100bda53c6d29752dee8acf36.js": "/DiagnOSU/precache-manifest.6b87cd8100bda53c6d29752dee8acf36.js",
     "service-worker.js": "/DiagnOSU/service-worker.js",
-    "static/css/main.f9d2f038.chunk.css.map": "/DiagnOSU/static/css/main.f9d2f038.chunk.css.map",
-    "static/js/2.01e99706.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.01e99706.chunk.js.LICENSE.txt",
+    "static/css/main.8811299c.chunk.css.map": "/DiagnOSU/static/css/main.8811299c.chunk.css.map",
+    "static/js/2.7121e6b7.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.7121e6b7.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/DiagnOSU/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.df422ff6.js",
-    "static/js/2.01e99706.chunk.js",
-    "static/css/main.f9d2f038.chunk.css",
-    "static/js/main.75185dc6.chunk.js"
+    "static/js/2.7121e6b7.chunk.js",
+    "static/css/main.8811299c.chunk.css",
+    "static/js/main.1790a902.chunk.js"
   ]
 }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eda9d8f97f9834d25d56e5162bd79a1d",
+    "revision": "b1fc10090262586e9c52bb955011a5b6",
     "url": "/DiagnOSU/index.html"
   },
   {
-    "revision": "80d0c70ee22efc5af0e7",
-    "url": "/DiagnOSU/static/css/main.f9d2f038.chunk.css"
+    "revision": "18368bb40154662d6646",
+    "url": "/DiagnOSU/static/css/main.8811299c.chunk.css"
   },
   {
-    "revision": "d12ea20e989e19b46669",
-    "url": "/DiagnOSU/static/js/2.01e99706.chunk.js"
+    "revision": "bdf6a0c77f430301e2d6",
+    "url": "/DiagnOSU/static/js/2.7121e6b7.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/DiagnOSU/static/js/2.01e99706.chunk.js.LICENSE.txt"
+    "url": "/DiagnOSU/static/js/2.7121e6b7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "80d0c70ee22efc5af0e7",
-    "url": "/DiagnOSU/static/js/main.75185dc6.chunk.js"
+    "revision": "18368bb40154662d6646",
+    "url": "/DiagnOSU/static/js/main.1790a902.chunk.js"
   },
   {
     "revision": "263eb46fcf3dd2b51270",
