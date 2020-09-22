@@ -3,3 +3,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.side-bar {
+    border-bottom: 3px solid rgb(102,102,102);
+    padding-bottom: 25px;
+}

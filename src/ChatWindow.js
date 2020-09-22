@@ -43,9 +43,9 @@ export class ChatWindow extends React.Component {
             <div> 
                 <Header />
                 <ChatWindowSidebar width ={300} height ={"100vh"}>
-                    <h1> TODO put link or something here </h1>
-                    <h1> TODO put link or something here </h1>
-                    <h1> TODO put link or something here </h1>
+                    <h1 class="side-bar"> <a href="https://www.cdc.gov/coronavirus/2019-ncov/more/index.html">Center for Disease Control and Prevention: Covid</a> </h1>
+                    <h1 class="side-bar"> <a href="https://www.nih.gov/coronavirus">National Institutes of Health: Covid</a> </h1>
+                    <h1 class="side-bar"> <a href="https://www.columbus.gov/covid19resources/">City of Columbus Covid Resources</a> </h1>
                 </ChatWindowSidebar>
                 <div className="chat-window">
                     <ChatDialog ref={this.chatDialog}/>
