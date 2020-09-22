@@ -5,7 +5,6 @@ function App() {
   return (
     <div data-testid="app-div" className="App">
         <ChatWindow/>
-        <img src={logo} alt="React Logo"/>
     </div>
   );
 }
