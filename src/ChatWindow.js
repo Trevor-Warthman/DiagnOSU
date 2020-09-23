@@ -42,14 +42,16 @@ export class ChatWindow extends React.Component {
         return (
             <div> 
                 <Header />
-                <ChatWindowSidebar width ={300} height ={"100vh"}>
-                    <h1> TODO put link or something here </h1>
-                    <h1> TODO put link or something here </h1>
-                    <h1> TODO put link or something here </h1>
-                </ChatWindowSidebar>
-                <div className="chat-window">
-                    <ChatDialog ref={this.chatDialog}/>
-                    <ChatInputForm onSubmit={this.submitMessage}/>
+                <div class="main-wrapper">
+                    <ChatWindowSidebar width ={300} height ={"100vh"}>
+                        <h1> TODO put link or something here </h1>
+                        <h1> TODO put link or something here </h1>
+                        <h1> TODO put link or something here </h1>
+                    </ChatWindowSidebar>
+                    <div className="chat-window">
+                        <ChatDialog ref={this.chatDialog}/>
+                        <ChatInputForm onSubmit={this.submitMessage}/>
+                    </div>
                 </div>
             </div>  
         );

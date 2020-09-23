@@ -1,10 +1,13 @@
 .chat-window {
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
+    display: inline-block;
 }
 .main-wrapper {
-   display: flex;
+    display: inline-block;
+   flex-direction: row;
+}
+
+.side-bar {
+    border-bottom: 3px solid rgb(102,102,102);
+    padding-bottom: 25px;
 }
