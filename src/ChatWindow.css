@@ -1,10 +1,12 @@
 .chat-window {
     align-items: center;
-    display: inline-block;
+    justify-content: center;
+    display: flex-end;
+    background-color: green;
 }
 .main-wrapper {
-    display: inline-block;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .side-bar {

@@ -1,46 +1,94 @@
 {
   "intents": [
     {
-      "intent": "CoronavirusShouldIGetTested",
+      "intent": "emergency_symptoms_intents",
       "examples": [
         {
-          "text": "Do I need to be tested for corona?"
+          "text": "I am experiencing seizures"
         },
         {
-          "text": "hey do i need a test for the covid-19?"
+          "text": "I am not able to wake up"
         },
         {
-          "text": "how do i know if i need a test for the rona?"
+          "text": "I have bluish face"
         },
         {
-          "text": "should i get a covid test?"
+          "text": "I have bluish lips"
         },
         {
-          "text": "Should I get tested for Coronavirus?"
+          "text": "Yes"
         }
       ],
-      "description": "When the user asks if they should get a Coronavirus test"
+      "description": "If the person is experiencing COVID-19 symptoms"
     },
     {
-      "intent": "EmergencyWarningSignsCOVID",
+      "intent": "no_emergency_symptoms_intents",
       "examples": [
         {
-          "text": "I am confused most of the time"
+          "text": "I don't see any such symptoms"
         },
         {
-          "text": "I am having a constant pain in my chest"
+          "text": "No"
         },
         {
-          "text": "I am not able to breathe completely"
+          "text": "None of the above symptoms"
         },
         {
-          "text": "I am not able to stay awake"
+          "text": "None of these symptoms but something else"
         },
         {
-          "text": "My face looks bluish"
+          "text": "No such symptoms on me"
         }
       ],
-      "description": "Check for emergency warning signs covid"
+      "description": "no Emergency symptoms"
+    },
+    {
+      "intent": "test_taker_self",
+      "examples": [
+        {
+          "text": "for me"
+        },
+        {
+          "text": "for myself"
+        },
+        {
+          "text": "me"
+        },
+        {
+          "text": "myself"
+        },
+        {
+          "text": "self"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "test_taker_someone_else",
+      "examples": [
+        {
+          "text": "brother"
+        },
+        {
+          "text": "father"
+        },
+        {
+          "text": "friend"
+        },
+        {
+          "text": "I am taking it for someone else"
+        },
+        {
+          "text": "mother"
+        },
+        {
+          "text": "not me"
+        },
+        {
+          "text": "sister"
+        }
+      ],
+      "description": "who is Dr. Brutus testing"
     }
   ],
   "entities": [
@@ -49,10 +97,25 @@
       "values": [
         {
           "type": "synonyms",
-          "value": "Cough",
+          "value": "congestion",
           "synonyms": [
-            "Difficulty Breathing"
+            "runny nose"
           ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cough",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Diarrhea",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "fatigue",
+          "synonyms": []
         },
         {
           "type": "synonyms",
@@ -72,6 +135,14 @@
         },
         {
           "type": "synonyms",
+          "value": "muscle pains",
+          "synonyms": [
+            "aches",
+            "body pains"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "Nausea",
           "synonyms": [
             "Vomiting"
@@ -80,6 +151,13 @@
         {
           "type": "synonyms",
           "value": "Shortness of breath",
+          "synonyms": [
+            "difficulty breathing"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sore throat",
           "synonyms": []
         }
       ],
@@ -136,19 +214,13 @@
   "dialog_nodes": [
     {
       "type": "standard",
-      "title": "Coronavirus test",
+      "title": "Please get tested",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Are you feeling sick?"
-              },
-              {
-                "text": "How are you feeling?"
-              },
-              {
-                "text": "Are you feeling any symptoms of coronavirus?"
+                "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area as you may infect someone else. You can exit the chat window now"
               }
             ],
             "response_type": "text",
@@ -156,20 +228,19 @@
           }
         ]
       },
-      "conditions": "#CoronavirusShouldIGetTested",
-      "dialog_node": "Anything else",
-      "previous_sibling": "node_2_1600377384054",
-      "disambiguation_opt_out": true
+      "conditions": "#emergency_symptoms_intents",
+      "dialog_node": "node_2_1600813339599",
+      "previous_sibling": "node_6_1600813626274"
     },
     {
       "type": "standard",
-      "title": "Emergency Signs",
+      "title": "Ending",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Please visit the nearest hospital or call 911, you may be a victim of COVID-19. Better late than never!"
+                "text": "Practice social distancing. Quarantine yourself if necessary. Keep your result in mind and get back to me if you experience any symptoms again"
               }
             ],
             "response_type": "text",
@@ -177,31 +248,134 @@
           }
         ]
       },
-      "conditions": "#EmergencyWarningSignsCOVID",
-      "dialog_node": "node_2_1600377384054",
+      "conditions": "",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1600810824990",
+      "previous_sibling": "node_2_1600813339599"
+    },
+    {
+      "type": "standard",
+      "title": "No emergency symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you think you have any of these symptoms?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#no_emergency_symptoms_intents",
+      "dialog_node": "node_6_1600813626274",
+      "previous_sibling": "node_7_1600811498606"
+    },
+    {
+      "type": "standard",
+      "title": "Emergency Test",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "There are a few symptoms that can be evaluated immideately"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Are you experiencing any of these?",
+            "options": [
+              {
+                "label": "Bluish lips or face",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Severe and constant pain or pressure in the chest",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Extreme difficulty breathing",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Severe and constant dizziness or lightheadedness",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Serious disorientation",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Unconscious or very difficult to wake up",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Slurred speech or difficulty speaking",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Seizures",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              },
+              {
+                "label": "Signs of low blood pressure (too weak to stand, light headed, feeling cold, pale, clammy skin)",
+                "value": {
+                  "input": {
+                    "text": "Please admit yourself to the nearest hospital. There is a high chance that you have COVID-19. Do not go to any other public area"
+                  }
+                }
+              }
+            ],
+            "description": "You can click on the contents below",
+            "response_type": "option"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1600813626274"
+      },
+      "conditions": "#test_taker_someone_else || #test_taker_self",
+      "dialog_node": "node_7_1600811498606",
       "previous_sibling": "Welcome"
-    },
-    {
-      "type": "standard",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "You should get tested"
-              },
-              {
-                "text": "I recommend you get tested for Coronavirus"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "conditions": "@CoronavirusSymptom",
-      "dialog_node": "node_8_1600206125680",
-      "previous_sibling": "Anything else"
     },
     {
       "type": "standard",
@@ -211,13 +385,21 @@
           {
             "values": [
               {
-                "text": "Hello. I can help you find information on the Coronavirus pandemic. How can I help you?"
+                "text": "Hello. I can help you figure out if you need a test for COVID-19. Are you taking the test for yourself or on behalf of someone else?"
+              },
+              {
+                "text": "Hello. Dr. Brutus here, tell me who are you answering for. is it you or anyone else?"
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1600811498606"
       },
       "conditions": "welcome",
       "dialog_node": "Welcome"
