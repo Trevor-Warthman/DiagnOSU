@@ -1,5 +1,16 @@
 .chat-window {
     align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+}
+.main-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.side-bar {
+    border-bottom: 3px solid rgb(102,102,102);
+    padding-bottom: 25px;
 }
