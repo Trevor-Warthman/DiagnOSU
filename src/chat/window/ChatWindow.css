@@ -3,11 +3,12 @@
     justify-content: center;
     width: 30%;
     height: 100%;
+    padding-left: 150px;
 }
 .main-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .side-bar {
