@@ -1,7 +1,9 @@
 import React from 'react';
 import { mount, configure } from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
-import {ChatWindow} from "./ChatWindow";
+import ChatWindow from "./ChatWindow";
+import store from '../store';
+import Provider from "react-redux/lib/components/Provider";
 
 configure({ adapter: new Adapter() });
 
@@ -10,7 +12,11 @@ describe("Chat Window", () => {
     let props;
     const chatWindow = () => {
         if(!mountedChatWindow) {
-            mountedChatWindow = mount(<ChatWindow {...props}/>);
+            mountedChatWindow = mount(
+                <Provider store={store}>
+                    <ChatWindow {...props}/>
+                </Provider>
+            );
         }
         return mountedChatWindow;
     }
@@ -24,7 +30,7 @@ describe("Chat Window", () => {
         const divs = chatWindow().find(".chat-window");
         expect(divs.length).toBe(1);
 
-        const chatDialog = divs.find(".chat-dialog");
+        const chatDialog = divs.find(".chat-message-container");
         expect(chatDialog.length).toBe(1);
 
         const chatInputForm = divs.find("form");
