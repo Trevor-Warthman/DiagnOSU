@@ -1,4 +1,6 @@
 import { createStore } from "redux";
 import { sendMessageReducer } from "./reducers";
 
-export default createStore(sendMessageReducer);
+const store = createStore(sendMessageReducer);
+
+export default store;

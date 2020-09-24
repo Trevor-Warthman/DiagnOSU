@@ -4,8 +4,10 @@ import {ChatInputForm} from "../ChatInputForm";
 import "./ChatWindow.css";
 import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
+import { sendUserMessageAction, sendWatsonMessageAction} from "../actions";
+import {connect} from "react-redux";
 
-export class ChatWindow extends React.Component {
+class ChatWindow extends React.Component {
 
     constructor(props) {
         super(props);
@@ -32,9 +34,13 @@ export class ChatWindow extends React.Component {
                 response = "Have a nice day";
         }
 
-        this.chatDialog.current.addMessage({content: message, isUser: true});
+        console.log(this.props);
+
+        console.log(this.state);
+
+        this.props.dispatch(sendUserMessageAction(message));
         // todo Get watson answers with ^^^ input
-        this.chatDialog.current.addMessage({content: response, isUser: false});
+        this.props.dispatch(sendWatsonMessageAction(message));
         this.setState({count: this.state.count + 1});
     }
 
@@ -57,3 +63,5 @@ export class ChatWindow extends React.Component {
         );
     }
 }
+
+export default connect()(ChatWindow);

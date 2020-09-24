@@ -2,6 +2,7 @@ import React from "react";
 import {UserMessage} from "../message/UserMessage";
 import "./ChatDialog.css";
 import {WatsonMessage} from "../message/WatsonMessage";
+import store from "./store";
 
 export class ChatDialog extends React.Component {
     constructor(props) {
@@ -10,6 +11,10 @@ export class ChatDialog extends React.Component {
         this.state = {messages: [], isWaiting: false};
         this.addMessage = this.addMessage.bind(this);
         this.createMessageElement = this.createMessageElement.bind(this);
+
+        store.subscribe(() => {
+            this.setState(store.getState())
+        });
     }
 
     createMessageElement(message) {
@@ -38,3 +43,4 @@ export class ChatDialog extends React.Component {
         );
     }
 }
+
