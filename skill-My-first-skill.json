@@ -1,6 +1,27 @@
 {
   "intents": [
     {
+      "intent": "basic_symptoms_intents",
+      "examples": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "Yes I have a lot of cough"
+        },
+        {
+          "text": "Yes I have difficulty breathing a lot of times"
+        },
+        {
+          "text": "Yes I have fever"
+        },
+        {
+          "text": "Yes I occasionally get the chills"
+        }
+      ],
+      "description": "Intents for basic symptoms"
+    },
+    {
       "intent": "emergency_symptoms_intents",
       "examples": [
         {
@@ -214,7 +235,7 @@
   "dialog_nodes": [
     {
       "type": "standard",
-      "title": "Please get tested",
+      "title": "Please get admitted",
       "output": {
         "generic": [
           {
@@ -228,9 +249,14 @@
           }
         ]
       },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
       "conditions": "#emergency_symptoms_intents",
       "dialog_node": "node_2_1600813339599",
-      "previous_sibling": "node_6_1600813626274"
+      "previous_sibling": "node_9_1600983429021"
     },
     {
       "type": "standard",
@@ -251,7 +277,7 @@
       "conditions": "",
       "digress_in": "does_not_return",
       "dialog_node": "node_4_1600810824990",
-      "previous_sibling": "node_2_1600813339599"
+      "previous_sibling": "node_9_1600983717948"
     },
     {
       "type": "standard",
@@ -266,8 +292,108 @@
             ],
             "response_type": "text",
             "selection_policy": "sequential"
+          },
+          {
+            "title": "Basic COVID-19 symptoms",
+            "options": [
+              {
+                "label": "Fever or Chills",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Cough ",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Shortness of breath or difficulty breathing",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Fatigue",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Muscle or body aches",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Headache",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "New loss of taste or smell",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Sore throat",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Runny nose or congestion",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Nausea or Vomiting",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              },
+              {
+                "label": "Diarrhea",
+                "value": {
+                  "input": {
+                    "text": "You may need to get tested for COVID-19. You are showing preliminary symptoms."
+                  }
+                }
+              }
+            ],
+            "description": "You can list out the symptoms if you like or you can click on the symptom",
+            "response_type": "option"
           }
         ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1600983429021"
       },
       "conditions": "#no_emergency_symptoms_intents",
       "dialog_node": "node_6_1600813626274",
@@ -376,6 +502,56 @@
       "conditions": "#test_taker_someone_else || #test_taker_self",
       "dialog_node": "node_7_1600811498606",
       "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Please get Tested",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please get tested in the nearest hospital. You are portraying basic symptoms of COVID-19"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#basic_symptoms_intents",
+      "dialog_node": "node_9_1600983429021",
+      "previous_sibling": "node_6_1600813626274"
+    },
+    {
+      "type": "standard",
+      "title": "No symptoms experienced",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Practice social distancing of six feet, follow all the CDC guidelines! you can visit the site through the sidebar. If you are still not convinced, please quarantine yourself for 14 days and talk to me again. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#no_emergency_symptoms_intents",
+      "dialog_node": "node_9_1600983717948",
+      "previous_sibling": "node_2_1600813339599"
     },
     {
       "type": "standard",
