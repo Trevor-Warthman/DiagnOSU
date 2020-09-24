@@ -1,13 +1,13 @@
 import React from "react";
-import {UserMessage} from "./message/UserMessage";
+import {UserMessage} from "../message/UserMessage";
 import "./ChatDialog.css";
-import {WatsonMessage} from "./message/WatsonMessage";
+import {WatsonMessage} from "../message/WatsonMessage";
 
 export class ChatDialog extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {messages: []};
+        this.state = {messages: [], isWaiting: false};
         this.addMessage = this.addMessage.bind(this);
         this.createMessageElement = this.createMessageElement.bind(this);
     }
