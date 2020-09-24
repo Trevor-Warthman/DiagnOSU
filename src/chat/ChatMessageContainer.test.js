@@ -21,7 +21,7 @@ describe("Chat Dialog", () => {
     });
 
     it("renders a chat dialog with no messages", () => {
-        const divs = chatDialog().find(".chat-dialog");
+        const divs = chatDialog().find(".chat-message-container");
         expect(divs.length).toBe(1);
     });
 });
