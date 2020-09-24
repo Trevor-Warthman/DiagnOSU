@@ -1,4 +1,4 @@
-.chat-dialog {
+.chat-message-container {
     width: 300px;
     display: flex;
     flex-direction: column;

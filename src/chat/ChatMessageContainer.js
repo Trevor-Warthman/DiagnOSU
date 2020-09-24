@@ -1,15 +1,19 @@
 import React from "react";
-import {UserMessage} from "./message/UserMessage";
-import "./ChatDialog.css";
-import {WatsonMessage} from "./message/WatsonMessage";
+import { UserMessage } from "./message/UserMessage";
+import "./ChatMessageContainer.css";
+import { WatsonMessage } from "./message/WatsonMessage";
+import store from "./store";
 
-export class ChatDialog extends React.Component {
+export class ChatMessageContainer extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {messages: []};
-        this.addMessage = this.addMessage.bind(this);
         this.createMessageElement = this.createMessageElement.bind(this);
+
+        store.subscribe(() => {
+            this.setState(store.getState())
+        });
     }
 
     createMessageElement(message) {
@@ -24,17 +28,12 @@ export class ChatDialog extends React.Component {
         }
     }
 
-    addMessage(message) {
-        this.setState(prevState => {
-            return {messages: [...prevState.messages, message]}
-        });
-    }
-
     render() {
         return (
-            <div className="chat-dialog">
+            <div className="chat-message-container">
                 {this.state.messages.map(c => this.createMessageElement(c))}
             </div>
         );
     }
 }
+

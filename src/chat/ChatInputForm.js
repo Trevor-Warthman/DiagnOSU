@@ -12,7 +12,7 @@ export class ChatInputForm extends React.Component {
     handleSubmit(event) {
 
         this.props.onSubmit(this.state.message);
-
+        
         this.setState({message: ''})
 
         event.preventDefault();

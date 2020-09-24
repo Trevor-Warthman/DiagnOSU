@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, configure } from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
-import {ChatDialog} from "./ChatDialog";
+import {ChatMessageContainer} from "./ChatMessageContainer";
 
 configure({ adapter: new Adapter() });
 
@@ -10,7 +10,7 @@ describe("Chat Dialog", () => {
     let props;
     const chatDialog = () => {
         if(!mountedChatDialog) {
-            mountedChatDialog = mount(<ChatDialog {...props}/>);
+            mountedChatDialog = mount(<ChatMessageContainer {...props}/>);
         }
         return mountedChatDialog;
     }
