@@ -4,7 +4,7 @@ import {ChatInputForm} from "../ChatInputForm";
 import "./ChatWindow.css";
 import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
-import { sendUserMessageAction, sendWatsonMessageAction} from "../actions";
+import { sendUserMessageAction } from "../actions";
 import {connect} from "react-redux";
 
 class ChatWindow extends React.Component {
@@ -25,16 +25,27 @@ class ChatWindow extends React.Component {
                 Authorization: "Basic YXBpa2V5OjJWYWo3VVQ1REh6Nkt6Y28xOHUyM2pyRVpFcHJ5Xzc5WGs3R3ozVEYxYnBB"
             },
             method: "POST"
-        }).then(data => console.log(data));
+        }).then(response => response.json())
+            .then(data => this.setState({sessionId: data.session_id}));
     }
 
     submitMessage(message) {
 
         this.props.dispatch(sendUserMessageAction(message));
 
-        this.props.dispatch(sendWatsonMessageAction(message));
-
-        this.setState({count: this.state.count + 1});
+        fetch(`https://api.us-south.assistant.watson.cloud.ibm.com/instances/abadaf22-9195-425a-aa9a-3e86f1cb4a28/v2/assistants/cca390d2-78f4-442c-b2e4-6275fe74ed82/sessions/${this.state.sessionId}/message?version=2020-04-01`, {
+            body: JSON.stringify({
+                input: {
+                    text: "hello"
+                }
+            }),
+            headers: {
+                Authorization: "Basic YXBpa2V5OjJWYWo3VVQ1REh6Nkt6Y28xOHUyM2pyRVpFcHJ5Xzc5WGs3R3ozVEYxYnBB",
+                "Content-Type": "application/json"
+            },
+            method: "POST"
+        }).then(response => response.json())
+            .then(data => console.log(data));
     }
 
     render() {
