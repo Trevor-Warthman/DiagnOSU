@@ -4,7 +4,7 @@ import {ChatInputForm} from "../ChatInputForm";
 import "./ChatWindow.css";
 import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
-import { sendUserMessageAction } from "../actions";
+import { sendUserMessageAction, sendWatsonMessageAction } from "../actions";
 import {connect} from "react-redux";
 
 class ChatWindow extends React.Component {
@@ -14,9 +14,8 @@ class ChatWindow extends React.Component {
 
         this.chatDialog = React.createRef();
         this.submitMessage = this.submitMessage.bind(this);
+
         this.state = {sessionId: ''};
-
-
     }
 
     componentDidMount() {
@@ -36,7 +35,7 @@ class ChatWindow extends React.Component {
         fetch(`https://api.us-south.assistant.watson.cloud.ibm.com/instances/abadaf22-9195-425a-aa9a-3e86f1cb4a28/v2/assistants/cca390d2-78f4-442c-b2e4-6275fe74ed82/sessions/${this.state.sessionId}/message?version=2020-04-01`, {
             body: JSON.stringify({
                 input: {
-                    text: "hello"
+                    text: message
                 }
             }),
             headers: {
@@ -45,7 +44,9 @@ class ChatWindow extends React.Component {
             },
             method: "POST"
         }).then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => data.output.generic.forEach(element => {
+                this.props.dispatch(sendWatsonMessageAction(element.text));
+            }));
     }
 
     render() {

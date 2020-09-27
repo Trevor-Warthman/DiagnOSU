@@ -15,7 +15,3 @@ export function sendMessageReducer(state={messages: [], isWaiting: false}, actio
         }
     }
 }
-
-export function createWatsonSessionReducer(state={sessionId: ''}, action) {
-    
-}
