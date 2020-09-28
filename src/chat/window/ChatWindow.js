@@ -45,7 +45,7 @@ class ChatWindow extends React.Component {
             method: "POST"
         }).then(response => response.json())
             .then(data => data.output.generic.forEach(element => {
-                this.props.dispatch(sendWatsonMessageAction(element.text));
+                this.props.dispatch(sendWatsonMessageAction(element));
             }));
     }
 
