@@ -30,9 +30,6 @@ describe("Chat Window", () => {
         const divs = chatWindow().find(".chat-window");
         expect(divs.length).toBe(1);
 
-        const chatDialog = divs.find(".chat-message-container");
-        expect(chatDialog.length).toBe(1);
-
         const chatInputForm = divs.find("form");
         expect(chatInputForm.length).toBe(1);
     });
