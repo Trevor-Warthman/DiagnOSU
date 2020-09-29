@@ -6,6 +6,7 @@ import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
 import { sendUserMessageAction, sendWatsonMessageAction } from "../actions";
 import {connect} from "react-redux";
+import embedded_bot from "./embedded_bot"
 
 class ChatWindow extends React.Component {
 
@@ -60,8 +61,7 @@ class ChatWindow extends React.Component {
                         <h1 className="side-bar"> <a href="https://www.columbus.gov/covid19resources/">City of Columbus Covid Resources</a> </h1>
                     </ChatWindowSidebar>
                     <div className="chat-window">
-                        <ChatMessageContainer ref={this.chatDialog}/>
-                        <ChatInputForm onSubmit={this.submitMessage}/>
+                        <embedded_bot />
                     </div>
                 </div>
             </div>  
