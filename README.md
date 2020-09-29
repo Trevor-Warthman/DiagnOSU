@@ -31,9 +31,10 @@ Demo 1 Script:
     - I have a cough, and my temperature is running a bit high.
     - Ok I will head to my closest testing center.
     
-    
+---------------------------------- 
     
 Demo 2 Script:
+  
   Path 1:
     me
     no
