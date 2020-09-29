@@ -1,6 +1,4 @@
 import React from "react";
-import {ChatMessageContainer} from "../ChatMessageContainer";
-import {ChatInputForm} from "../ChatInputForm";
 import "./ChatWindow.css";
 import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
