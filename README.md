@@ -22,7 +22,7 @@ Run `npm run deploy` to deploy changes to Github pages. (You may need to be logg
 
 Run `npm start` to run application locally, and visit the app at http://localhost:3000.
 
-Demo Script:
+Demo 1 Script:
 
   Hi We are the group diagnOSU and we are working on a COVID chat bot. It will work something like this.
 
@@ -30,3 +30,21 @@ Demo Script:
     - Hi, I think I have covid!
     - I have a cough, and my temperature is running a bit high.
     - Ok I will head to my closest testing center.
+    
+---------------------------------- 
+    
+Demo 2 Script:
+  
+  Path 1:
+    me
+    no
+    no
+    
+  Path 2:
+    me
+    seizures
+    
+  Path 3:
+    me
+    no
+    yes I have chills
