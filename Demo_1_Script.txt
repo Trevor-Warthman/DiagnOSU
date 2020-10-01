@@ -1,0 +1,34 @@
+
+Script:
+
+	Path 1:
+		me
+		no
+		no
+	Path 2:
+		me 
+		Seizures
+	Path 3:
+		me
+		no
+		yes i have chills
+		
+
+Talking points:
+
+	Hi we are the team developing DiagnOSU a covid chat bot to help you determine
+	whether you need to get tested or not. We have created a React app that we have deployed to 
+	github pages. We use continuous integration through github actions. We decided to try and
+	maximize what we got out of this class by spiting tasks into things each of us have not had
+	much experience in and that is why you get to look at my lovely front end  development
+	that I learned in 2 week. As for the knowledge system part of the class we used Watson 
+	assistant and trained it on some of the serious and less serious symptoms of covid to 
+	give a good recommendation for when the user needs to get a test. Im now going to show
+	you guys 3 different paths that a user might go through when using the bot.
+	
+	* do demo here *
+	
+	In our next iteration we will be ironing out some of the more specific cases and the edge
+	cases that our current iteration does not catch. We will also work towards integrating the
+	frop down menu to auto fill text so you can look at the drop down and select a symptom you
+	are experiencing instead of exiting the drop down and exiting.
