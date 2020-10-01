@@ -1,6 +1,9 @@
 # diagnOSU
 Covid-19 Medical Chat Bot
 
+Link:
+https://trevor-warthman.github.io/DiagnOSU/
+
 Setup:
 
 NPM Github Setup:
