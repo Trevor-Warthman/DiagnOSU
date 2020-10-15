@@ -145,6 +145,18 @@
       "description": "If the person is experiencing COVID-19 symptoms"
     },
     {
+      "intent": "General_Feeling_Bad",
+      "examples": [
+        {
+          "text": "I don't feel good"
+        },
+        {
+          "text": "I feel like shit"
+        }
+      ],
+      "description": "\"I feel like shit\", \"I don't feel good\" - when user says something negative in response to \"How are you feeling today?\""
+    },
+    {
       "intent": "no_emergency_symptoms_intents",
       "examples": [
         {
