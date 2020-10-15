@@ -1,75 +1,6 @@
 {
   "intents": [
     {
-      "intent": "basic_symptoms_intents",
-      "examples": [
-        {
-          "text": "body ache"
-        },
-        {
-          "text": "chills"
-        },
-        {
-          "text": "congestion"
-        },
-        {
-          "text": "cough"
-        },
-        {
-          "text": "diarrhea"
-        },
-        {
-          "text": "difficulty breathing"
-        },
-        {
-          "text": "fatigue"
-        },
-        {
-          "text": "fever"
-        },
-        {
-          "text": "headache"
-        },
-        {
-          "text": "muscle ache"
-        },
-        {
-          "text": "nausea"
-        },
-        {
-          "text": "new lost smell"
-        },
-        {
-          "text": "new lost taste"
-        },
-        {
-          "text": "runny nose"
-        },
-        {
-          "text": "shortness of breath"
-        },
-        {
-          "text": "sore throat"
-        },
-        {
-          "text": "vomiting"
-        },
-        {
-          "text": "Yes I have a lot of cough"
-        },
-        {
-          "text": "Yes I have difficulty breathing a lot of times"
-        },
-        {
-          "text": "Yes I have fever"
-        },
-        {
-          "text": "Yes I occasionally get the chills"
-        }
-      ],
-      "description": "Intents for basic symptoms"
-    },
-    {
       "intent": "doneSpeaking",
       "examples": [
         {
@@ -86,6 +17,9 @@
         },
         {
           "text": "no"
+        },
+        {
+          "text": "no i havent"
         },
         {
           "text": "No more questions"
@@ -109,98 +43,14 @@
       "description": "When the user is done listing symptoms and asking questions"
     },
     {
-      "intent": "emergency_symptoms_intents",
-      "examples": [
-        {
-          "text": "bloody poop"
-        },
-        {
-          "text": "bloody stool"
-        },
-        {
-          "text": "bluish face"
-        },
-        {
-          "text": "bluish lips"
-        },
-        {
-          "text": "clammy skin"
-        },
-        {
-          "text": "constant dizziness"
-        },
-        {
-          "text": "constant pain in the chest"
-        },
-        {
-          "text": "difficulty speaking"
-        },
-        {
-          "text": "extreme difficulty breathing"
-        },
-        {
-          "text": "hard to speak"
-        },
-        {
-          "text": "heart attack"
-        },
-        {
-          "text": "I am experiencing seizures"
-        },
-        {
-          "text": "I am not able to wake up"
-        },
-        {
-          "text": "I have bluish face"
-        },
-        {
-          "text": "I have bluish lips"
-        },
-        {
-          "text": "lightheadedness"
-        },
-        {
-          "text": "loss of conciousness"
-        },
-        {
-          "text": "me"
-        },
-        {
-          "text": "pressure in the chest"
-        },
-        {
-          "text": "seizures"
-        },
-        {
-          "text": "serious disorientation"
-        },
-        {
-          "text": "severe dizziness"
-        },
-        {
-          "text": "severe pain"
-        },
-        {
-          "text": "severe pain in the chest"
-        },
-        {
-          "text": "slurred speech"
-        },
-        {
-          "text": "too weak to stand"
-        },
-        {
-          "text": "unconscious"
-        },
-        {
-          "text": "vomiting blood"
-        }
-      ],
-      "description": "If the person is experiencing a COVID-19 or NON COVID-19 related emergency"
-    },
-    {
       "intent": "findOutIfSick",
       "examples": [
+        {
+          "text": "a lot"
+        },
+        {
+          "text": "am i dying"
+        },
         {
           "text": "Am I sick?"
         },
@@ -209,6 +59,9 @@
         },
         {
           "text": "Do I have covid?"
+        },
+        {
+          "text": "do i have the corona virus"
         },
         {
           "text": "What's wrong with me?"
@@ -283,6 +136,105 @@
       "description": "User wants to hear more covid symptoms"
     },
     {
+      "intent": "medical_symptoms_intents",
+      "examples": [
+        {
+          "text": "body ache"
+        },
+        {
+          "text": "chills"
+        },
+        {
+          "text": "congestion"
+        },
+        {
+          "text": "cough"
+        },
+        {
+          "text": "diarrhea"
+        },
+        {
+          "text": "difficulty breathing"
+        },
+        {
+          "text": "fatigue"
+        },
+        {
+          "text": "fever"
+        },
+        {
+          "text": "headache"
+        },
+        {
+          "text": "I can't breathe"
+        },
+        {
+          "text": "I feel like a have a fever"
+        },
+        {
+          "text": "I have a headache"
+        },
+        {
+          "text": "I'm having seizures"
+        },
+        {
+          "text": "muscle ache"
+        },
+        {
+          "text": "My chest hurts"
+        },
+        {
+          "text": "nausea"
+        },
+        {
+          "text": "new lost smell"
+        },
+        {
+          "text": "new lost taste"
+        },
+        {
+          "text": "runny nose"
+        },
+        {
+          "text": "shortness of breath"
+        },
+        {
+          "text": "sore throat"
+        },
+        {
+          "text": "vomiting"
+        },
+        {
+          "text": "Yes I have a lot of cough"
+        },
+        {
+          "text": "Yes I have difficulty breathing a lot of times"
+        },
+        {
+          "text": "Yes I have fever"
+        },
+        {
+          "text": "Yes I occasionally get the chills"
+        }
+      ],
+      "description": "Intents for medical symptoms - Trigger when user describes something about their body"
+    },
+    {
+      "intent": "NegativeResponse",
+      "examples": [
+        {
+          "text": "nah"
+        },
+        {
+          "text": "No"
+        },
+        {
+          "text": "Nope"
+        }
+      ],
+      "description": "When the user replies \"no\" to a yes/no question"
+    },
+    {
       "intent": "no_emergency_symptoms_intents",
       "examples": [
         {
@@ -304,6 +256,24 @@
       "description": "no Emergency symptoms"
     },
     {
+      "intent": "PositiveResponse",
+      "examples": [
+        {
+          "text": "Of course"
+        },
+        {
+          "text": "ya"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "When the user answers 'yes' to a yes/no question"
+    },
+    {
       "intent": "sayBye",
       "examples": [
         {
@@ -311,6 +281,9 @@
         },
         {
           "text": "Bye Dr. Brutus"
+        },
+        {
+          "text": "fuck off"
         },
         {
           "text": "Goodbye"
@@ -355,6 +328,27 @@
       "description": "User is trying to initiate a conversation."
     },
     {
+      "intent": "VaguePositiveStatement",
+      "examples": [
+        {
+          "text": "Feeling great!"
+        },
+        {
+          "text": "good"
+        },
+        {
+          "text": "I am feeling fantastic"
+        },
+        {
+          "text": "I'm doing good"
+        },
+        {
+          "text": "im well"
+        }
+      ],
+      "description": "User says they are doing well but provides no other information"
+    },
+    {
       "intent": "vagueSymptoms",
       "examples": [
         {
@@ -370,10 +364,19 @@
           "text": "I don't feel too well, is it covid?"
         },
         {
+          "text": "i feel bad"
+        },
+        {
           "text": "I might have covid-19"
         },
         {
           "text": "I think I have covid"
+        },
+        {
+          "text": "not good"
+        },
+        {
+          "text": "terrible"
         }
       ],
       "description": "If user vaguely implies having symptoms"
@@ -421,6 +424,13 @@
           "value": "Fever",
           "synonyms": [
             "chills"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Headache",
+          "synonyms": [
+            "head hurts"
           ]
         },
         {
@@ -677,11 +687,6 @@
       "fuzzy_match": true
     },
     {
-      "entity": "noDetailCovidSymptom",
-      "values": [],
-      "fuzzy_match": true
-    },
-    {
       "entity": "nonCovidSymptom",
       "values": [
         {
@@ -730,37 +735,11 @@
           "type": "synonyms",
           "value": "sore feet",
           "synonyms": []
-        }
-      ],
-      "fuzzy_match": true
-    },
-    {
-      "entity": "possibleCovid",
-      "values": [
-        {
-          "type": "synonyms",
-          "value": "cough",
-          "synonyms": []
         },
         {
           "type": "synonyms",
-          "value": "runny nose",
+          "value": "Sunburn",
           "synonyms": []
-        }
-      ],
-      "fuzzy_match": true
-    },
-    {
-      "entity": "probableCovid",
-      "values": [
-        {
-          "type": "synonyms",
-          "value": "fever",
-          "synonyms": [
-            "burning up",
-            "hot forehead",
-            "hot skin"
-          ]
         }
       ],
       "fuzzy_match": true
@@ -831,39 +810,57 @@
         ]
       },
       "parent": "node_4_1600810824990",
-      "conditions": "@noSymptoms",
+      "conditions": "true",
       "dialog_node": "node_1_1602614974974",
       "previous_sibling": "node_2_1602615270593"
     },
     {
       "type": "standard",
-      "title": "Medical Emergancy",
+      "title": "Respond to Medical Symptoms",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Please admit yourself to the nearest hospital immediately. I suggest calling 9-1-1. You are experiencing a medical emergency that is dangerous to your health. "
+                "text": "I'm sorry to hear you're feeling that way."
               }
             ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          },
-          {
-            "values": [],
             "response_type": "text",
             "selection_policy": "sequential"
           }
         ]
       },
       "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#medical_symptoms_intents",
+      "dialog_node": "node_1_1602729687154",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to non COVID-19 symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This is not a symptom of covid, but may be a symptom of something else."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602729687154",
+      "next_step": {
         "behavior": "jump_to",
         "selector": "body",
-        "dialog_node": "node_4_1600810824990"
+        "dialog_node": "node_8_1602618666866"
       },
-      "conditions": "#emergency_symptoms_intents",
-      "dialog_node": "node_2_1600813339599",
-      "previous_sibling": "node_3_1602611410356"
+      "conditions": "@nonCovidSymptom",
+      "dialog_node": "node_1_1602729744547"
     },
     {
       "type": "standard",
@@ -885,6 +882,20 @@
       "conditions": "@nonCovidSymptom",
       "dialog_node": "node_2_1602615270593",
       "previous_sibling": "node_4_1602614943198"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_8_1602618666866",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_2_1602730653729"
     },
     {
       "type": "standard",
@@ -923,6 +934,27 @@
     },
     {
       "type": "standard",
+      "title": "Respond to medical emergency",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please admit yourself to the nearest hospital immediately. I suggest calling 9-1-1. You are experiencing a medical emergency that is dangerous to your health. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602729687154",
+      "conditions": "@healthEmergancy",
+      "dialog_node": "node_3_1602785014899",
+      "previous_sibling": "node_4_1602729865071"
+    },
+    {
+      "type": "standard",
       "title": "Ending",
       "output": {
         "generic": [
@@ -940,10 +972,10 @@
       "next_step": {
         "behavior": "skip_user_input"
       },
-      "conditions": "",
+      "conditions": "#doneSpeaking",
       "digress_in": "does_not_return",
       "dialog_node": "node_4_1600810824990",
-      "previous_sibling": "node_2_1600813339599"
+      "previous_sibling": "node_3_1602611410356"
     },
     {
       "type": "standard",
@@ -974,6 +1006,9 @@
             "values": [
               {
                 "text": "It seems like you might have COVID-19. Though I can't say for sure, you should definitely quarantine yourself, practice social distancing, and schedule a COVID test for as soon as possible. "
+              },
+              {
+                "text": "You most likely have COVID-19. Please get a test ASAP, and be extra cautious to social distance. Do NOT go in to work, attend a public event, or go outside for any reason other than an emergency. "
               }
             ],
             "response_type": "text",
@@ -982,9 +1017,8 @@
         ]
       },
       "parent": "node_4_1600810824990",
-      "conditions": "@possibleCovid",
-      "dialog_node": "node_4_1602614943198",
-      "previous_sibling": "node_9_1602614985648"
+      "conditions": "$PossibleCoronavirusCase",
+      "dialog_node": "node_4_1602614943198"
     },
     {
       "type": "standard",
@@ -1029,13 +1063,13 @@
     },
     {
       "type": "standard",
-      "title": "recognizeNonCovidSymptom",
+      "title": "Respond to COVID-19 symptoms",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "This is not a symptom of covid, but may be a symptom of something else. Have you had any other symptoms latley?"
+                "text": "This is a common symptom of COVID-19."
               }
             ],
             "response_type": "text",
@@ -1043,35 +1077,38 @@
           }
         ]
       },
-      "conditions": "@nonCovidSymptom",
-      "dialog_node": "node_6_1602616420821",
-      "previous_sibling": "node_9_1602617415247"
+      "parent": "node_1_1602729687154",
+      "context": {
+        "PossibleCoronavirusCase": true
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1602618666866"
+      },
+      "conditions": "@CoronavirusSymptom",
+      "dialog_node": "node_4_1602729865071",
+      "previous_sibling": "node_1_1602729744547"
     },
     {
       "type": "standard",
-      "title": "Fever",
-      "parent": "node_7_1602616339118",
-      "conditions": "@fever",
-      "dialog_node": "node_6_1602618605635"
-    },
-    {
-      "type": "standard",
-      "title": "recognizeCovidSymptom",
       "output": {
         "generic": [
           {
-            "values": [],
+            "values": [
+              {
+                "text": "We're sorry to hear that, we hope they're doing okay."
+              }
+            ],
             "response_type": "text",
             "selection_policy": "sequential"
           }
         ]
       },
-      "next_step": {
-        "behavior": "skip_user_input"
-      },
-      "conditions": "@CoronavirusSymptom",
-      "dialog_node": "node_7_1602616339118",
-      "previous_sibling": "node_6_1602616420821"
+      "parent": "node_7_1602617827618",
+      "conditions": "#PositiveResponse",
+      "dialog_node": "node_6_1602728469091",
+      "previous_sibling": "node_7_1602727719000"
     },
     {
       "type": "standard",
@@ -1081,7 +1118,7 @@
           {
             "values": [
               {
-                "text": "Glad you're doing well! Let's talk about COVID-19. Have you had any illness symptoms recently?"
+                "text": "Glad you're doing well! Let's talk about COVID-19. Have you been in contact with anyone who has tested positive for it in the past 14 days?"
               }
             ],
             "response_type": "text",
@@ -1089,13 +1126,37 @@
           }
         ]
       },
-      "conditions": "@feelingGood",
+      "conditions": "#VaguePositiveStatement",
       "dialog_node": "node_7_1602617827618",
       "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
-      "title": "Respond to Vagueness - Ok",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good! Make sure to wear a mask in public, avoid large gatherings, and stay at least 6 feet apart from others."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602617827618",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_7_1602727719000"
+    },
+    {
+      "type": "standard",
+      "title": "Ask if user is feeling sick",
       "output": {
         "generic": [
           {
@@ -1105,6 +1166,9 @@
               },
               {
                 "text": "How have you been feeling lately? Be specific."
+              },
+              {
+                "text": "Let's talk about COVID-19. Are you feeling sick?"
               }
             ],
             "response_type": "text",
@@ -1112,9 +1176,9 @@
           }
         ]
       },
-      "conditions": "#vagueSymptoms || @feelingOK || #findOutIfSick",
+      "conditions": "#vagueSymptoms || #findOutIfSick",
       "dialog_node": "node_8_1602616055289",
-      "previous_sibling": "node_7_1602616339118"
+      "previous_sibling": "node_9_1602617415247"
     },
     {
       "type": "standard",
@@ -1142,68 +1206,7 @@
         ]
       },
       "dialog_node": "node_8_1602618666866",
-      "previous_sibling": "node_8_1602618859665"
-    },
-    {
-      "type": "standard",
-      "title": "Nothing else to talk about",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_4_1600810824990"
-      },
-      "conditions": "#doneSpeaking",
-      "dialog_node": "node_8_1602618859665",
-      "previous_sibling": "Welcome"
-    },
-    {
-      "type": "standard",
-      "title": "Cough",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "This is a pretty common symptom of COVID-19. "
-              },
-              {
-                "text": "This shows up often in COVID-19 patients."
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_7_1602616339118",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_8_1602618666866"
-      },
-      "conditions": "@CoronavirusSymptom",
-      "dialog_node": "node_8_1602619622279",
-      "previous_sibling": "node_6_1602618605635"
-    },
-    {
-      "type": "standard",
-      "title": "Probable Covid",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "You most likely have COVID-19. Please get a test ASAP, and be extra cautious to social distance. Do NOT go in to work, attend a public event, or go outside for any reason other than an emergency. "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_4_1600810824990",
-      "conditions": "@probableCovid",
-      "dialog_node": "node_9_1602614985648"
+      "previous_sibling": "node_1_1602729687154"
     },
     {
       "type": "standard",
@@ -1223,26 +1226,6 @@
       },
       "conditions": "#insultDrBrutus",
       "dialog_node": "node_9_1602617415247",
-      "previous_sibling": "node_9_1602617672272"
-    },
-    {
-      "type": "standard",
-      "title": "Respond to Vagueness - Bad",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Oh, that sucks. What's been bothering you?"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "conditions": "@feelingBad",
-      "dialog_node": "node_9_1602617672272",
       "previous_sibling": "node_7_1602617827618"
     },
     {
