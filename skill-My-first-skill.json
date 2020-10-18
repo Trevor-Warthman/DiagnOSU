@@ -22,6 +22,30 @@
       "description": "Triggered when the user says they have had close contact with someone who has tested positive for COVID-19"
     },
     {
+      "intent": "compliment",
+      "examples": [
+        {
+          "text": "I really appreciate all your help!"
+        },
+        {
+          "text": "Thanks for being the best"
+        },
+        {
+          "text": "You are so fun"
+        },
+        {
+          "text": "You look cute today"
+        },
+        {
+          "text": "You're really helpful"
+        },
+        {
+          "text": "You're the best chatbot"
+        }
+      ],
+      "description": "When user compliments Dr. Brutus"
+    },
+    {
       "intent": "doneSpeaking",
       "examples": [
         {
@@ -77,6 +101,9 @@
         },
         {
           "text": "Do I have covid?"
+        },
+        {
+          "text": "Do I have it?"
         },
         {
           "text": "do i have the corona virus"
@@ -223,6 +250,9 @@
           "text": "My chest hurts"
         },
         {
+          "text": "my foot fell off"
+        },
+        {
           "text": "nausea"
         },
         {
@@ -331,6 +361,12 @@
           "text": "Goodbye"
         },
         {
+          "text": "I haven't been ill"
+        },
+        {
+          "text": "I haven't been sick"
+        },
+        {
           "text": "See ya"
         },
         {
@@ -389,6 +425,9 @@
         },
         {
           "text": "like a million bucks"
+        },
+        {
+          "text": "I've felt well"
         }
       ],
       "description": "User says they are doing well but provides no other information"
@@ -401,6 +440,9 @@
         },
         {
           "text": "do i have covid"
+        },
+        {
+          "text": "Everything hurts"
         },
         {
           "text": "hi I feel like shit"
@@ -416,6 +458,9 @@
         },
         {
           "text": "I think I have covid"
+        },
+        {
+          "text": "I've been feeling okay"
         },
         {
           "text": "not good"
@@ -665,7 +710,22 @@
         },
         {
           "type": "synonyms",
+          "value": "I'm convulsing",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "I'm having a stroke",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "I need an ambulance",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Losing blood",
           "synonyms": []
         },
         {
@@ -820,6 +880,27 @@
     },
     {
       "type": "standard",
+      "title": "Irrelevant Input",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That doesn't seem to be something I can help you with. Let's talk about how you've been feeling lately."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "true",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1603043184781",
+      "previous_sibling": "node_3_1602611410356"
+    },
+    {
+      "type": "standard",
       "title": "Say hello",
       "output": {
         "generic": [
@@ -880,7 +961,7 @@
       },
       "conditions": "#medical_symptoms_intents",
       "dialog_node": "node_1_1602729687154",
-      "previous_sibling": "Welcome"
+      "previous_sibling": "node_1_1603044089757"
     },
     {
       "type": "standard",
@@ -890,7 +971,7 @@
           {
             "values": [
               {
-                "text": "This is not a symptom of covid, but may be a symptom of something else."
+                "text": "I'm sorry to hear about that. This is not a symptom of covid, but may be a symptom of something else."
               }
             ],
             "response_type": "text",
@@ -906,6 +987,46 @@
       },
       "conditions": "@nonCovidSymptom",
       "dialog_node": "node_1_1602729744547"
+    },
+    {
+      "type": "standard",
+      "title": "Compliment Dr. Brutus",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you :)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#compliment",
+      "dialog_node": "node_1_1603044089757",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What are those symptoms?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602618666866",
+      "conditions": "#PositiveResponse",
+      "dialog_node": "node_1_1603046472902",
+      "previous_sibling": "node_2_1602730653729"
     },
     {
       "type": "standard",
@@ -985,7 +1106,7 @@
           {
             "values": [
               {
-                "text": "Please admit yourself to the nearest hospital immediately. I suggest calling 9-1-1. You are experiencing a medical emergency that is dangerous to your health. "
+                "text": "Stop this test and admit yourself to the nearest hospital immediately. I suggest calling 9-1-1. You are experiencing a medical emergency that is dangerous and potentially life threatening."
               }
             ],
             "response_type": "text",
@@ -997,6 +1118,31 @@
       "conditions": "@healthEmergancy",
       "dialog_node": "node_3_1602785014899",
       "previous_sibling": "node_4_1602729865071"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please answer with a Yes or No"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602618666866",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_8_1602618666866"
+      },
+      "conditions": "true",
+      "dialog_node": "node_3_1603046526670",
+      "previous_sibling": "node_5_1603047003088"
     },
     {
       "type": "standard",
@@ -1020,7 +1166,7 @@
       "conditions": "#doneSpeaking",
       "digress_in": "does_not_return",
       "dialog_node": "node_4_1600810824990",
-      "previous_sibling": "node_3_1602611410356"
+      "previous_sibling": "node_10_1603043184781"
     },
     {
       "type": "standard",
@@ -1114,7 +1260,7 @@
           {
             "values": [
               {
-                "text": "This is a common symptom of COVID-19."
+                "text": "I'm sorry to hear you're feeling that way. This is a common symptom of COVID-19."
               }
             ],
             "response_type": "text",
@@ -1134,6 +1280,19 @@
       "conditions": "@CoronavirusSymptom",
       "dialog_node": "node_4_1602729865071",
       "previous_sibling": "node_1_1602729744547"
+    },
+    {
+      "type": "standard",
+      "title": "Specific Medical",
+      "parent": "node_8_1602618666866",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1602729687154"
+      },
+      "conditions": "#medical_symptoms_intents",
+      "dialog_node": "node_5_1603047003088",
+      "previous_sibling": "node_1_1603046472902"
     },
     {
       "type": "standard",
@@ -1263,6 +1422,31 @@
     },
     {
       "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please answer Yes or No"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602617827618",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_7_1602617827618"
+      },
+      "conditions": "#true",
+      "dialog_node": "node_8_1603046796697",
+      "previous_sibling": "node_6_1602728469091"
+    },
+    {
+      "type": "standard",
       "title": "Respond to Insult",
       "output": {
         "generic": [
@@ -1333,7 +1517,7 @@
     "spelling_auto_correct": true
   },
   "learning_opt_out": false,
-  "name": "My first skill",
+  "name": "Dr. Brutus V2",
   "language": "en",
   "description": ""
 }
