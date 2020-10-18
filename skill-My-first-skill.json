@@ -1,6 +1,27 @@
 {
   "intents": [
     {
+      "intent": "ContactWithCOVIDPatient",
+      "examples": [
+        {
+          "text": "A teacher at my school has the virus"
+        },
+        {
+          "text": "i went to a party last week and everyone has coronavirus now"
+        },
+        {
+          "text": "joe has covid"
+        },
+        {
+          "text": "my coworker tested positive for it"
+        },
+        {
+          "text": "my friend has covid"
+        }
+      ],
+      "description": "Triggered when the user says they have had close contact with someone who has tested positive for COVID-19"
+    },
+    {
       "intent": "doneSpeaking",
       "examples": [
         {
@@ -17,9 +38,6 @@
         },
         {
           "text": "no"
-        },
-        {
-          "text": "no i havent"
         },
         {
           "text": "No more questions"
@@ -64,10 +82,25 @@
           "text": "do i have the corona virus"
         },
         {
+          "text": "do i need to be tested for covid"
+        },
+        {
           "text": "What's wrong with me?"
         }
       ],
       "description": "User wants to know if they have covid, if they're sick. Basically they're being vague."
+    },
+    {
+      "intent": "General_Feeling_Bad",
+      "examples": [
+        {
+          "text": "I don't feel good"
+        },
+        {
+          "text": "I feel like shit"
+        }
+      ],
+      "description": "\"I feel like shit\", \"I don't feel good\" - when user says something negative in response to \"How are you feeling today?\""
     },
     {
       "intent": "insultDrBrutus",
@@ -175,6 +208,9 @@
           "text": "I have a headache"
         },
         {
+          "text": "I have a weird mole on my butt"
+        },
+        {
           "text": "I just sneezed"
         },
         {
@@ -232,22 +268,13 @@
           "text": "No"
         },
         {
+          "text": "no i havent"
+        },
+        {
           "text": "Nope"
         }
       ],
       "description": "When the user replies \"no\" to a yes/no question"
-    },
-    {
-      "intent": "General_Feeling_Bad",
-      "examples": [
-        {
-          "text": "I don't feel good"
-        },
-        {
-          "text": "I feel like shit"
-        }
-      ],
-      "description": "\"I feel like shit\", \"I don't feel good\" - when user says something negative in response to \"How are you feeling today?\""
     },
     {
       "intent": "no_emergency_symptoms_intents",
@@ -359,6 +386,9 @@
         },
         {
           "text": "im well"
+        },
+        {
+          "text": "like a million bucks"
         }
       ],
       "description": "User says they are doing well but provides no other information"
@@ -976,7 +1006,6 @@
           {
             "values": [
               {
-                "text": "Practice social distancing. Quarantine yourself if necessary. Keep your result in mind and get back to me if you experience any symptoms again. You can exit the chat window now",
                 "text": "Based on our conversation, here are my suggestions:"
               }
             ],
@@ -1064,7 +1093,6 @@
           {
             "values": [
               {
-                "text": "It seems that you might have the flu. Remember to stay hydrated, and if your condition worsens to seek medical attention.",
                 "text": "Emergency test message"
               }
             ],
@@ -1123,7 +1151,15 @@
         ]
       },
       "parent": "node_7_1602617827618",
-      "conditions": "#PositiveResponse",
+      "context": {
+        "PossibleCoronavirusCase": true
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
       "dialog_node": "node_6_1602728469091",
       "previous_sibling": "node_7_1602727719000"
     },
