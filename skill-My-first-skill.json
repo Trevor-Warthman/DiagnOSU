@@ -1,27 +1,6 @@
 {
   "intents": [
     {
-      "intent": "ContactWithCOVIDPatient",
-      "examples": [
-        {
-          "text": "A teacher at my school has the virus"
-        },
-        {
-          "text": "i went to a party last week and everyone has coronavirus now"
-        },
-        {
-          "text": "joe has covid"
-        },
-        {
-          "text": "my coworker tested positive for it"
-        },
-        {
-          "text": "my friend has covid"
-        }
-      ],
-      "description": "Triggered when the user says they have had close contact with someone who has tested positive for COVID-19"
-    },
-    {
       "intent": "compliment",
       "examples": [
         {
@@ -62,6 +41,9 @@
         },
         {
           "text": "no"
+        },
+        {
+          "text": "no i havent"
         },
         {
           "text": "No more questions"
@@ -107,9 +89,6 @@
         },
         {
           "text": "do i have the corona virus"
-        },
-        {
-          "text": "do i need to be tested for covid"
         },
         {
           "text": "What's wrong with me?"
@@ -235,9 +214,6 @@
           "text": "I have a headache"
         },
         {
-          "text": "I have a weird mole on my butt"
-        },
-        {
           "text": "I just sneezed"
         },
         {
@@ -296,9 +272,6 @@
         },
         {
           "text": "No"
-        },
-        {
-          "text": "no i havent"
         },
         {
           "text": "Nope"
@@ -424,9 +397,6 @@
           "text": "im well"
         },
         {
-          "text": "like a million bucks"
-        },
-        {
           "text": "I've felt well"
         }
       ],
@@ -489,75 +459,196 @@
       "values": [
         {
           "type": "synonyms",
+          "value": "body ache",
+          "synonyms": [
+            "body discomfort",
+            "body hurts",
+            "body soreness",
+            "body spasm",
+            "body throb",
+            "body twinge",
+            "sore body"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "chills",
+          "synonyms": [
+            "clammy",
+            "cold",
+            "coolness",
+            "goosebumps",
+            "gooseflesh",
+            "iciness",
+            "shivers",
+            "shivery",
+            "shudder"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "congestion",
           "synonyms": [
-            "runny nose"
+            "boogers",
+            "clogged nose",
+            "congestion",
+            "leaky nose",
+            "nasal blockage",
+            "nasal discharge",
+            "nasal obstruction",
+            "nasal pressure",
+            "runny nose",
+            "sinus pain",
+            "sneezing",
+            "snot",
+            "stuffy nose"
           ]
         },
         {
           "type": "synonyms",
           "value": "Cough",
-          "synonyms": []
+          "synonyms": [
+            "convulse",
+            "croak",
+            "frog in throat",
+            "hack",
+            "rasp",
+            "rasping",
+            "wheeze",
+            "wheezing"
+          ]
         },
         {
           "type": "synonyms",
           "value": "Diarrhea",
-          "synonyms": []
+          "synonyms": [
+            "backdoor trots",
+            "Diarrhoea",
+            "dysentary",
+            "flux",
+            "loose stool",
+            "Montezuma’s revenge",
+            "the runs"
+          ]
         },
         {
           "type": "synonyms",
           "value": "fatigue",
-          "synonyms": []
+          "synonyms": [
+            "debility",
+            "drained",
+            "drowsiness",
+            "enervation",
+            "exhaustion",
+            "lassitude",
+            "lethargy",
+            "overtaxed",
+            "overtired",
+            "taxed",
+            "tired",
+            "tiredness",
+            "weariness",
+            "weary",
+            "worn out"
+          ]
         },
         {
           "type": "synonyms",
           "value": "Fever",
           "synonyms": [
-            "chills"
+            "febrility",
+            "feverish",
+            "high temperature",
+            "hot forehead",
+            "pyrexia",
+            "raised body temperature"
           ]
         },
         {
           "type": "synonyms",
           "value": "Headache",
           "synonyms": [
-            "head hurts"
+            "head hurts",
+            "head pain",
+            "migraine",
+            "neuralgia",
+            "splitting head"
           ]
         },
         {
           "type": "synonyms",
-          "value": "loss of taste",
+          "value": "loss of smell",
           "synonyms": [
+            "anosmia",
+            "can't smell",
+            "can't smell anything",
+            "hyposmia",
             "loss of smell",
             "no smell",
-            "no taste"
+            "smell nothing"
           ]
         },
         {
           "type": "synonyms",
-          "value": "muscle pains",
+          "value": "muscle ache",
           "synonyms": [
-            "aches",
-            "body pains"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "Nausea",
-          "synonyms": [
-            "Vomiting"
+            "muscle discomfort",
+            "muscle hurts",
+            "muscle sore",
+            "muscle soreness",
+            "muscle spasm",
+            "muscle throb",
+            "muscle twinge"
           ]
         },
         {
           "type": "synonyms",
           "value": "Shortness of breath",
           "synonyms": [
-            "difficulty breathing"
+            "Breathing difficulties",
+            "Breathlessness",
+            "difficulty breathing",
+            "Difficulty in breathing",
+            "Gasping for air",
+            "Gasps",
+            "hard to breathe",
+            "Having trouble breathing",
+            "Labored breath",
+            "Labored breathing",
+            "Laboured breathing",
+            "Lack of air",
+            "Out of breath",
+            "Panting",
+            "Rapid breathes",
+            "Respiratory difficulty",
+            "Respiratory distress",
+            "Shallow breath",
+            "Struggle to breathe",
+            "Wheezing"
           ]
         },
         {
           "type": "synonyms",
           "value": "Sore throat",
-          "synonyms": []
+          "synonyms": [
+            "inflamed throat",
+            "pharyngitis",
+            "raw throat"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "vommiting",
+          "synonyms": [
+            "biliousness",
+            "gagging",
+            "nausea",
+            "queasiness",
+            "queasy",
+            "retching",
+            "sickness",
+            "throw up"
+          ]
         }
       ],
       "fuzzy_match": true
@@ -946,11 +1037,7 @@
       "output": {
         "generic": [
           {
-            "values": [
-              {
-                "text": "I'm sorry to hear you're feeling that way."
-              }
-            ],
+            "values": [],
             "response_type": "text",
             "selection_policy": "sequential"
           }
@@ -1310,15 +1397,7 @@
         ]
       },
       "parent": "node_7_1602617827618",
-      "context": {
-        "PossibleCoronavirusCase": true
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_4_1600810824990"
-      },
-      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
+      "conditions": "#PositiveResponse",
       "dialog_node": "node_6_1602728469091",
       "previous_sibling": "node_7_1602727719000"
     },
