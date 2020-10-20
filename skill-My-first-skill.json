@@ -1,6 +1,27 @@
 {
   "intents": [
     {
+      "intent": "ContactWithCOVIDPatient",
+      "examples": [
+        {
+          "text": "A teacher at my school has the virus"
+        },
+        {
+          "text": "i went to a party last week and everyone has coronavirus now"
+        },
+        {
+          "text": "joe has covid"
+        },
+        {
+          "text": "my coworker tested positive for it"
+        },
+        {
+          "text": "my friend has covid"
+        }
+      ],
+      "description": "Triggered when the user says they have had close contact with someone who has tested positive for COVID-19"
+    },
+    {
       "intent": "compliment",
       "examples": [
         {
@@ -41,9 +62,6 @@
         },
         {
           "text": "no"
-        },
-        {
-          "text": "no i havent"
         },
         {
           "text": "No more questions"
@@ -89,6 +107,9 @@
         },
         {
           "text": "do i have the corona virus"
+        },
+        {
+          "text": "do i need to be tested for covid"
         },
         {
           "text": "What's wrong with me?"
@@ -214,6 +235,9 @@
           "text": "I have a headache"
         },
         {
+          "text": "I have a weird mole on my butt"
+        },
+        {
           "text": "I just sneezed"
         },
         {
@@ -272,6 +296,9 @@
         },
         {
           "text": "No"
+        },
+        {
+          "text": "no i havent"
         },
         {
           "text": "Nope"
@@ -395,6 +422,9 @@
         },
         {
           "text": "im well"
+        },
+        {
+          "text": "like a million bucks"
         },
         {
           "text": "I've felt well"
@@ -916,7 +946,11 @@
       "output": {
         "generic": [
           {
-            "values": [],
+            "values": [
+              {
+                "text": "I'm sorry to hear you're feeling that way."
+              }
+            ],
             "response_type": "text",
             "selection_policy": "sequential"
           }
@@ -1276,7 +1310,15 @@
         ]
       },
       "parent": "node_7_1602617827618",
-      "conditions": "#PositiveResponse",
+      "context": {
+        "PossibleCoronavirusCase": true
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
       "dialog_node": "node_6_1602728469091",
       "previous_sibling": "node_7_1602727719000"
     },
