@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DiagnOSU/static/css/main.db606491.chunk.css",
-    "main.js": "/DiagnOSU/static/js/main.4c55fc42.chunk.js",
-    "main.js.map": "/DiagnOSU/static/js/main.4c55fc42.chunk.js.map",
+    "main.js": "/DiagnOSU/static/js/main.3c4157a8.chunk.js",
+    "main.js.map": "/DiagnOSU/static/js/main.3c4157a8.chunk.js.map",
     "runtime-main.js": "/DiagnOSU/static/js/runtime-main.df422ff6.js",
     "runtime-main.js.map": "/DiagnOSU/static/js/runtime-main.df422ff6.js.map",
     "static/js/2.223c649f.chunk.js": "/DiagnOSU/static/js/2.223c649f.chunk.js",
     "static/js/2.223c649f.chunk.js.map": "/DiagnOSU/static/js/2.223c649f.chunk.js.map",
     "index.html": "/DiagnOSU/index.html",
-    "precache-manifest.d61d1377adc5ea6a570862a554987643.js": "/DiagnOSU/precache-manifest.d61d1377adc5ea6a570862a554987643.js",
+    "precache-manifest.2ce63c821ad2390ed297daf3f506cd7b.js": "/DiagnOSU/precache-manifest.2ce63c821ad2390ed297daf3f506cd7b.js",
     "service-worker.js": "/DiagnOSU/service-worker.js",
     "static/css/main.db606491.chunk.css.map": "/DiagnOSU/static/css/main.db606491.chunk.css.map",
     "static/js/2.223c649f.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.223c649f.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.df422ff6.js",
     "static/js/2.223c649f.chunk.js",
     "static/css/main.db606491.chunk.css",
-    "static/js/main.4c55fc42.chunk.js"
+    "static/js/main.3c4157a8.chunk.js"
   ]
 }
