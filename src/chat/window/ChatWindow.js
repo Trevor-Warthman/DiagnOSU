@@ -4,6 +4,7 @@ import Header from "./ChatWindowHeader";
 import ChatWindowSidebar from "./ChatWindowSidebar";
 import { sendUserMessageAction, sendWatsonMessageAction } from "../actions";
 import {connect} from "react-redux";
+import ReactPlayer from "react-player"
 import embedded_bot from "./embedded_bot"
 
 class ChatWindow extends React.Component {
@@ -58,6 +59,9 @@ class ChatWindow extends React.Component {
                         <h1 className="side-bar"> <a href="https://www.nih.gov/coronavirus">National Institutes of Health: Covid</a> </h1>
                         <h1 className="side-bar"> <a href="https://www.columbus.gov/covid19resources/">City of Columbus Covid Resources</a> </h1>
                     </ChatWindowSidebar>
+                    <div className="youtube">
+                        <ReactPlayer url="https://www.youtube.com/watch?v=DCdxsnRF1Fk&ab_channel=UpToDate"/>
+                    </div>
                     <div className="chat-window">
                         <embedded_bot />
                     </div>
