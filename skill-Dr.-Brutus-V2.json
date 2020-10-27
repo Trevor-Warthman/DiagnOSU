@@ -4,7 +4,7 @@
       "intent": "compliment",
       "examples": [
         {
-          "text": "do i need to be tested for covid"
+          "text": "I love you"
         },
         {
           "text": "I really appreciate all your help!"
@@ -23,6 +23,9 @@
         },
         {
           "text": "You're the best chatbot"
+        },
+        {
+          "text": "You seem really cool"
         }
       ],
       "description": "When user compliments Dr. Brutus"
@@ -97,6 +100,9 @@
           "text": "Can you help me?"
         },
         {
+          "text": "Could you tell me if I need to be tested for covid?"
+        },
+        {
           "text": "Do I have covid?"
         },
         {
@@ -109,22 +115,16 @@
           "text": "do i need to be tested for covid"
         },
         {
+          "text": "Do I need to be tested for covid?"
+        },
+        {
+          "text": "I feel like shit am I sick"
+        },
+        {
           "text": "What's wrong with me?"
         }
       ],
       "description": "User wants to know if they have covid, if they're sick. Basically they're being vague."
-    },
-    {
-      "intent": "General_Feeling_Bad",
-      "examples": [
-        {
-          "text": "I don't feel good"
-        },
-        {
-          "text": "I feel like shit"
-        }
-      ],
-      "description": "\"I feel like shit\", \"I don't feel good\" - when user says something negative in response to \"How are you feeling today?\""
     },
     {
       "intent": "insultDrBrutus",
@@ -196,10 +196,28 @@
       "intent": "medical_symptoms_intents",
       "examples": [
         {
-          "text": "body ache"
+          "text": "body ache",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                0,
+                9
+              ]
+            }
+          ]
         },
         {
-          "text": "chills"
+          "text": "chills",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                0,
+                6
+              ]
+            }
+          ]
         },
         {
           "text": "congestion"
@@ -229,19 +247,82 @@
           "text": "I can't breathe"
         },
         {
-          "text": "I feel like a have a fever"
+          "text": "I feel like a have a fever",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                21,
+                26
+              ]
+            }
+          ]
         },
         {
-          "text": "I have a headache"
+          "text": "I have a headache",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                9,
+                17
+              ]
+            }
+          ]
         },
         {
-          "text": "I have a weird mole on my butt"
+          "text": "I have a weird mole on my butt",
+          "mentions": [
+            {
+              "entity": "nonCovidSymptom",
+              "location": [
+                15,
+                19
+              ]
+            }
+          ]
         },
         {
-          "text": "I just sneezed"
+          "text": "I have the chills and I am sneezing a lot",
+          "mentions": [
+            {
+              "entity": "nonCovidSymptom",
+              "location": [
+                27,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I just sneezed",
+          "mentions": [
+            {
+              "entity": "nonCovidSymptom",
+              "location": [
+                7,
+                14
+              ]
+            }
+          ]
         },
         {
           "text": "I'm having seizures"
+        },
+        {
+          "text": "It burns when I pee"
+        },
+        {
+          "text": "I've been pooping a lot",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                10,
+                23
+              ]
+            }
+          ]
         },
         {
           "text": "muscle ache"
@@ -256,10 +337,28 @@
           "text": "nausea"
         },
         {
-          "text": "new lost smell"
+          "text": "new lost smell",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                4,
+                14
+              ]
+            }
+          ]
         },
         {
-          "text": "new lost taste"
+          "text": "new lost taste",
+          "mentions": [
+            {
+              "entity": "CoronavirusSymptom",
+              "location": [
+                4,
+                14
+              ]
+            }
+          ]
         },
         {
           "text": "runny nose"
@@ -415,28 +514,16 @@
       "intent": "vagueDiscomfort",
       "examples": [
         {
-          "text": "am I gonna die"
-        },
-        {
-          "text": "do i have covid"
-        },
-        {
           "text": "Everything hurts"
         },
         {
           "text": "hi I feel like shit"
         },
         {
-          "text": "I don't feel too well, is it covid?"
-        },
-        {
           "text": "i feel bad"
         },
         {
-          "text": "I might have covid-19"
-        },
-        {
-          "text": "I think I have covid"
+          "text": "I'm not feeling great"
         },
         {
           "text": "I've been feeling okay"
@@ -463,6 +550,9 @@
           "text": "I am feeling fantastic"
         },
         {
+          "text": "I feel like a million bucks"
+        },
+        {
           "text": "I'm doing good"
         },
         {
@@ -476,17 +566,6 @@
     }
   ],
   "entities": [
-    {
-      "entity": "coldSymptom",
-      "values": [
-        {
-          "type": "synonyms",
-          "value": "sneezing",
-          "synonyms": []
-        }
-      ],
-      "fuzzy_match": true
-    },
     {
       "entity": "CoronavirusSymptom",
       "values": [
@@ -623,6 +702,16 @@
         },
         {
           "type": "synonyms",
+          "value": "lost smell",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "lost taste",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "muscle ache",
           "synonyms": [
             "muscle discomfort",
@@ -636,29 +725,8 @@
         },
         {
           "type": "synonyms",
-          "value": "Shortness of breath",
-          "synonyms": [
-            "Breathing difficulties",
-            "Breathlessness",
-            "difficulty breathing",
-            "Difficulty in breathing",
-            "Gasping for air",
-            "Gasps",
-            "hard to breathe",
-            "Having trouble breathing",
-            "Labored breath",
-            "Labored breathing",
-            "Laboured breathing",
-            "Lack of air",
-            "Out of breath",
-            "Panting",
-            "Rapid breathes",
-            "Respiratory difficulty",
-            "Respiratory distress",
-            "Shallow breath",
-            "Struggle to breathe",
-            "Wheezing"
-          ]
+          "value": "pooping a lot",
+          "synonyms": []
         },
         {
           "type": "synonyms",
@@ -671,7 +739,7 @@
         },
         {
           "type": "synonyms",
-          "value": "vommiting",
+          "value": "vomiting",
           "synonyms": [
             "biliousness",
             "gagging",
@@ -898,6 +966,18 @@
         },
         {
           "type": "synonyms",
+          "value": "Shortness of Breath",
+          "synonyms": [
+            "Difficulty breathing",
+            "Gasping",
+            "Gasping for air",
+            "Hard to breathe",
+            "Labored Breathing",
+            "Panting"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "trouble breathing",
           "synonyms": [
             "pressure in chest"
@@ -969,7 +1049,17 @@
         },
         {
           "type": "synonyms",
+          "value": "mole",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "nail",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sneezed",
           "synonyms": []
         },
         {
@@ -1136,7 +1226,8 @@
         "dialog_node": "node_8_1602618666866"
       },
       "conditions": "@nonCovidSymptom",
-      "dialog_node": "node_1_1602729744547"
+      "dialog_node": "node_1_1602729744547",
+      "previous_sibling": "node_3_1602785014899"
     },
     {
       "type": "standard",
@@ -1403,8 +1494,7 @@
         "dialog_node": "node_8_1602618666866"
       },
       "conditions": "@CoronavirusSymptom",
-      "dialog_node": "node_4_1602729865071",
-      "previous_sibling": "node_1_1602729744547"
+      "dialog_node": "node_4_1602729865071"
     },
     {
       "type": "standard",
