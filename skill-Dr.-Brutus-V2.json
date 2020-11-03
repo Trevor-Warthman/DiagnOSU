@@ -37,6 +37,9 @@
           "text": "A teacher at my school has the virus"
         },
         {
+          "text": "I went to a party and everyone got covid"
+        },
+        {
           "text": "i went to a party last week and everyone has coronavirus now"
         },
         {
@@ -446,6 +449,9 @@
         },
         {
           "text": "Yes"
+        },
+        {
+          "text": "yes i have"
         }
       ],
       "description": "When the user answers 'yes' to a yes/no question"
@@ -523,6 +529,9 @@
           "text": "i feel bad"
         },
         {
+          "text": "i feel sick"
+        },
+        {
           "text": "I'm not feeling great"
         },
         {
@@ -548,6 +557,12 @@
         },
         {
           "text": "I am feeling fantastic"
+        },
+        {
+          "text": "I feel amazing"
+        },
+        {
+          "text": "I feel good"
         },
         {
           "text": "I feel like a million bucks"
@@ -1180,7 +1195,7 @@
         ]
       },
       "parent": "node_4_1600810824990",
-      "conditions": "true",
+      "conditions": "$NoContactWithCovidPatient",
       "dialog_node": "node_1_1602614974974",
       "previous_sibling": "node_2_1602615270593"
     },
@@ -1306,6 +1321,34 @@
     },
     {
       "type": "standard",
+      "title": "Repond to Contact with COVID Patient",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We're sorry to hear that, we hope they're doing okay."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "PossibleCoronavirusCase": true
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#ContactWithCOVIDPatient",
+      "dialog_node": "node_2_1604019271107",
+      "previous_sibling": "node_8_1604117014252"
+    },
+    {
+      "type": "standard",
       "title": "User is leaving before end",
       "output": {
         "generic": [
@@ -1364,17 +1407,7 @@
       "type": "standard",
       "title": "Ending",
       "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Based on our conversation, here are my suggestions:"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
+        "generic": []
       },
       "next_step": {
         "behavior": "skip_user_input"
@@ -1511,41 +1544,13 @@
     },
     {
       "type": "standard",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "We're sorry to hear that, we hope they're doing okay."
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_7_1602617827618",
-      "context": {
-        "PossibleCoronavirusCase": true
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_4_1600810824990"
-      },
-      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
-      "dialog_node": "node_6_1602728469091",
-      "previous_sibling": "node_7_1602727719000"
-    },
-    {
-      "type": "standard",
       "title": "Respond to Vagueness - Good",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Glad you're doing well! Let's talk about COVID-19. Have you been in contact with anyone who has tested positive for it in the past 14 days?"
+                "text": "Glad you're doing well! "
               }
             ],
             "response_type": "text",
@@ -1554,33 +1559,26 @@
         ]
       },
       "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
       "conditions": "#VaguePositiveStatement",
       "dialog_node": "node_7_1602617827618",
       "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "That's good! Make sure to wear a mask in public, avoid large gatherings, and stay at least 6 feet apart from others."
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_7_1602617827618",
+      "parent": "node_4_1600810824990",
       "next_step": {
         "behavior": "jump_to",
         "selector": "body",
-        "dialog_node": "node_4_1600810824990"
+        "dialog_node": "node_8_1604117014252"
       },
-      "conditions": "#NegativeResponse",
-      "dialog_node": "node_7_1602727719000"
+      "conditions": "true",
+      "dialog_node": "node_7_1604115015476",
+      "previous_sibling": "node_1_1602614974974"
     },
     {
       "type": "standard",
@@ -1638,12 +1636,13 @@
     },
     {
       "type": "standard",
+      "title": "Ask if User was in contact with COVID patient",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Please answer Yes or No"
+                "text": "Let's talk about COVID-19. Have you been in contact with anyone who has tested positive for it in the past 14 days?"
               }
             ],
             "response_type": "text",
@@ -1651,15 +1650,32 @@
           }
         ]
       },
-      "parent": "node_7_1602617827618",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "user_input",
-        "dialog_node": "node_7_1602617827618"
+      "conditions": "#ContactWithCOVIDPatient",
+      "dialog_node": "node_8_1604117014252",
+      "previous_sibling": "node_7_1602617827618"
+    },
+    {
+      "type": "standard",
+      "title": "User answers No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good! Make sure to wear a mask in public, avoid large gatherings, and stay at least 6 feet apart from others."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
       },
-      "conditions": "#true",
-      "dialog_node": "node_8_1603046796697",
-      "previous_sibling": "node_6_1602728469091"
+      "parent": "node_8_1604117014252",
+      "context": {
+        "NoContactWithCovidPatient": true
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_8_1604117082235"
     },
     {
       "type": "standard",
@@ -1679,7 +1695,35 @@
       },
       "conditions": "#insultDrBrutus",
       "dialog_node": "node_9_1602617415247",
-      "previous_sibling": "node_7_1602617827618"
+      "previous_sibling": "node_2_1604019271107"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We're sorry to hear that, we hope they're doing okay."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1604117014252",
+      "context": {
+        "PossibleCoronavirusCase": true
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
+      "dialog_node": "node_9_1604117879981",
+      "previous_sibling": "node_8_1604117082235"
     },
     {
       "type": "standard",
