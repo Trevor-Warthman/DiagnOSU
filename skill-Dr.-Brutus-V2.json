@@ -172,6 +172,27 @@
       "description": "If the user insults Dr. Brutus"
     },
     {
+      "intent": "listColdSymptoms",
+      "examples": [
+        {
+          "text": "Common Cold symptoms"
+        },
+        {
+          "text": "do I have the cold?"
+        },
+        {
+          "text": "How do cold symptoms compare to corona?"
+        },
+        {
+          "text": "How do cold symptoms compare to covid-19?"
+        },
+        {
+          "text": "What are symptoms of the cold"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "listCommonSymptoms",
       "examples": [
         {
@@ -200,6 +221,24 @@
         }
       ],
       "description": "User wants to see a listing of common COVID symptoms"
+    },
+    {
+      "intent": "listFluSymptoms",
+      "examples": [
+        {
+          "text": "Flu Symptoms"
+        },
+        {
+          "text": "How do Flu Symptoms compare to covid?"
+        },
+        {
+          "text": "What are Flu Symptoms"
+        },
+        {
+          "text": "What are signs of flu"
+        }
+      ],
+      "description": ""
     },
     {
       "intent": "listUncommonSymptoms",
@@ -1388,7 +1427,7 @@
       },
       "conditions": "#AskIfDrBrutusIsRealDoctor",
       "dialog_node": "node_2_1604618137719",
-      "previous_sibling": "Welcome"
+      "previous_sibling": "node_4_1604618554364"
     },
     {
       "type": "standard",
@@ -1574,6 +1613,26 @@
     },
     {
       "type": "standard",
+      "title": "List Cold Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Signs of the common cold are:\n\n- Runny or stuff nose\n- Mild Cough\n- Fatigue\n- Sneezing\n- Watery eyes\n- Sore throat\n- Headaches\n- Aches and pains\n\nOne significant difference between the signs of the cold and covid-19 is that sneezing is a very common sign of the cold, but an uncommon symptom of covid-19. \nIf you are experiencing any of the above symptoms you may have the common cold. Keep in mind that many cold symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#listColdSymptoms",
+      "dialog_node": "node_4_1604618554364",
+      "previous_sibling": "node_6_1604619678844"
+    },
+    {
+      "type": "standard",
       "title": "Specific Medical",
       "parent": "node_8_1602618666866",
       "next_step": {
@@ -1584,6 +1643,26 @@
       "conditions": "#medical_symptoms_intents",
       "dialog_node": "node_5_1603047003088",
       "previous_sibling": "node_1_1603046472902"
+    },
+    {
+      "type": "standard",
+      "title": "List Flu Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Signs of the Flu are:\n\n- Fever and/or chills\n- Cough (usually dry)\n- Fatigue\n- Aches and pains\n- Runny or stuffy nose (sometimes)\n- Sore throat (sometimes)\n- Diarrhea (sometimes in children)\n\nIf you are experiencing any of the above symptoms you may have the flu. Keep in mind that many flu symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#listFluSymptoms",
+      "dialog_node": "node_6_1604619678844",
+      "previous_sibling": "Welcome"
     },
     {
       "type": "standard",
