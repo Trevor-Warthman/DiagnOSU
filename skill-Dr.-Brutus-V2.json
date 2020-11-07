@@ -1,6 +1,24 @@
 {
   "intents": [
     {
+      "intent": "AskIfDrBrutusIsRealDoctor",
+      "examples": [
+        {
+          "text": "Are you a doctor?"
+        },
+        {
+          "text": "Are you a real doctor?"
+        },
+        {
+          "text": "is dr Brutus a real doctor"
+        },
+        {
+          "text": "r u a real doctor?"
+        }
+      ],
+      "description": "When the user asks if the bot is a medical professional"
+    },
+    {
       "intent": "compliment",
       "examples": [
         {
@@ -1301,7 +1319,7 @@
       },
       "conditions": "#compliment",
       "dialog_node": "node_1_1603044089757",
-      "previous_sibling": "node_6_1604618541307"
+      "previous_sibling": "node_2_1604618137719"
     },
     {
       "type": "standard",
@@ -1385,6 +1403,31 @@
       "conditions": "#ContactWithCOVIDPatient",
       "dialog_node": "node_2_1604019271107",
       "previous_sibling": "node_8_1604117014252"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to user asking if Dr. Brutus is a real doctor",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No, I am not a real doctor. I am a chatbot created by students at Ohio State University. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1602616055289"
+      },
+      "conditions": "#AskIfDrBrutusIsRealDoctor",
+      "dialog_node": "node_2_1604618137719",
+      "previous_sibling": "node_4_1604618554364"
     },
     {
       "type": "standard",
@@ -1600,11 +1643,6 @@
       "conditions": "#medical_symptoms_intents",
       "dialog_node": "node_5_1603047003088",
       "previous_sibling": "node_1_1603046472902"
-    },
-    {
-      "type": "standard",
-      "dialog_node": "node_6_1604618541307",
-      "previous_sibling": "node_4_1604618554364"
     },
     {
       "type": "standard",
@@ -1865,4 +1903,3 @@
   "language": "en",
   "description": ""
 }
-
