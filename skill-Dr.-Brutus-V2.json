@@ -2526,7 +2526,7 @@
       "conditions": "#VaguePositiveStatement || #no_medical_symptoms",
       "digress_in": "does_not_return",
       "dialog_node": "node_8_1604117014252",
-      "previous_sibling": "node_8_1602618666866"
+      "previous_sibling": "node_7_1602617827618"
     },
     {
       "type": "standard",
