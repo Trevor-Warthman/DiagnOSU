@@ -19,6 +19,27 @@
       "description": "When the user asks if the bot is a medical professional"
     },
     {
+      "intent": "canPetHaveCovid",
+      "examples": [
+        {
+          "text": "Can a cat get corona"
+        },
+        {
+          "text": "Can a dog have covid"
+        },
+        {
+          "text": "Can animals have coronavirus"
+        },
+        {
+          "text": "Can a pet have covid-19?"
+        },
+        {
+          "text": "Can my goldfish have the virus"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "compliment",
       "examples": [
         {
@@ -55,10 +76,22 @@
           "text": "A teacher at my school has the virus"
         },
         {
+          "text": "I met a person with covid recently"
+        },
+        {
+          "text": "I met someone who turned out to have gotten covid"
+        },
+        {
+          "text": "I was exposed to someone who had covid"
+        },
+        {
           "text": "I went to a party and everyone got covid"
         },
         {
           "text": "i went to a party last week and everyone has coronavirus now"
+        },
+        {
+          "text": "I went to a trump rally yesterday"
         },
         {
           "text": "joe has covid"
@@ -68,9 +101,33 @@
         },
         {
           "text": "my friend has covid"
+        },
+        {
+          "text": "My toddler keeps throwing up on me"
         }
       ],
       "description": "Triggered when the user says they have had close contact with someone who has tested positive for COVID-19"
+    },
+    {
+      "intent": "covidVSCorona",
+      "examples": [
+        {
+          "text": "Are covid and corona the same?"
+        },
+        {
+          "text": "Is coronavirus the same as covid-19?"
+        },
+        {
+          "text": "What does covid-19 mean? is it the same as coronavirus?"
+        },
+        {
+          "text": "What is covid-19??"
+        },
+        {
+          "text": "What is the china-virus?"
+        }
+      ],
+      "description": ""
     },
     {
       "intent": "doneSpeaking",
@@ -142,10 +199,121 @@
           "text": "I feel like shit am I sick"
         },
         {
+          "text": "i have no symptoms"
+        },
+        {
+          "text": "I have no symptoms!"
+        },
+        {
           "text": "What's wrong with me?"
         }
       ],
       "description": "User wants to know if they have covid, if they're sick. Basically they're being vague."
+    },
+    {
+      "intent": "football",
+      "examples": [
+        {
+          "text": "Are you a football fan?"
+        },
+        {
+          "text": "are you going to watch the game on saturday?"
+        },
+        {
+          "text": "Do you like the buckeyes?"
+        },
+        {
+          "text": "Who is your favorite osu player?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "getTestingLocation",
+      "examples": [
+        {
+          "text": "can you test me for covid?"
+        },
+        {
+          "text": "is there a covid test center near me?"
+        },
+        {
+          "text": "Where can I get tested?"
+        },
+        {
+          "text": "Where do I get a test?"
+        },
+        {
+          "text": "Where is a testing center?"
+        },
+        {
+          "text": "where tests for COVID-19"
+        },
+        {
+          "text": "Where tests for OVID-19"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "IDontKnow",
+      "examples": [
+        {
+          "text": "idk"
+        },
+        {
+          "text": "I don't know"
+        },
+        {
+          "text": "I have no clue"
+        },
+        {
+          "text": "I'm not sure"
+        },
+        {
+          "text": "no idea"
+        },
+        {
+          "text": "not sure"
+        }
+      ],
+      "description": "User is vague and says idk"
+    },
+    {
+      "intent": "inquireDrBrutusWellbeing",
+      "examples": [
+        {
+          "text": "do u have covid"
+        },
+        {
+          "text": "Do you feel good?"
+        },
+        {
+          "text": "Have you been doing well?"
+        },
+        {
+          "text": "How are things?"
+        },
+        {
+          "text": "How are you?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How's it hanging?"
+        },
+        {
+          "text": "What are you doing today?"
+        },
+        {
+          "text": "You look sick"
+        },
+        {
+          "text": "you seem ill"
+        }
+      ],
+      "description": "Ask how he is doing"
     },
     {
       "intent": "insultDrBrutus",
@@ -160,6 +328,9 @@
           "text": "shut up"
         },
         {
+          "text": "you look bad"
+        },
+        {
           "text": "your developers are worthless"
         },
         {
@@ -170,6 +341,27 @@
         }
       ],
       "description": "If the user insults Dr. Brutus"
+    },
+    {
+      "intent": "listColdSymptoms",
+      "examples": [
+        {
+          "text": "Common Cold symptoms"
+        },
+        {
+          "text": "do I have the cold?"
+        },
+        {
+          "text": "How do cold symptoms compare to corona?"
+        },
+        {
+          "text": "How do cold symptoms compare to covid-19?"
+        },
+        {
+          "text": "What are symptoms of the cold"
+        }
+      ],
+      "description": ""
     },
     {
       "intent": "listCommonSymptoms",
@@ -202,8 +394,29 @@
       "description": "User wants to see a listing of common COVID symptoms"
     },
     {
+      "intent": "listFluSymptoms",
+      "examples": [
+        {
+          "text": "Flu Symptoms"
+        },
+        {
+          "text": "How do Flu Symptoms compare to covid?"
+        },
+        {
+          "text": "What are Flu Symptoms"
+        },
+        {
+          "text": "What are signs of flu"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "listUncommonSymptoms",
       "examples": [
+        {
+          "text": "diarrhea"
+        },
         {
           "text": "What are some more symptoms?"
         },
@@ -247,9 +460,6 @@
           "text": "cough"
         },
         {
-          "text": "diarrhea"
-        },
-        {
           "text": "difficulty breathing"
         },
         {
@@ -260,6 +470,12 @@
         },
         {
           "text": "headache"
+        },
+        {
+          "text": "Help I'm bleeding"
+        },
+        {
+          "text": "Help I'm going into shock"
         },
         {
           "text": "hurts"
@@ -302,6 +518,12 @@
               ]
             }
           ]
+        },
+        {
+          "text": "I have cold feet"
+        },
+        {
+          "text": "I have spurred speech"
         },
         {
           "text": "I have the chills and I am sneezing a lot",
@@ -463,6 +685,9 @@
       "intent": "PositiveResponse",
       "examples": [
         {
+          "text": "i have one of those"
+        },
+        {
           "text": "Of course"
         },
         {
@@ -506,9 +731,6 @@
         },
         {
           "text": "See you later"
-        },
-        {
-          "text": "Thanks for your help"
         }
       ],
       "description": "User is about to log off"
@@ -520,10 +742,10 @@
           "text": "Hello"
         },
         {
-          "text": "Hi"
+          "text": "Hey"
         },
         {
-          "text": "How's it going?"
+          "text": "Hi"
         },
         {
           "text": "suh dude"
@@ -541,8 +763,59 @@
       "description": "User is trying to initiate a conversation."
     },
     {
+      "intent": "thanks",
+      "examples": [
+        {
+          "text": "Alright, thanks"
+        },
+        {
+          "text": "I appreciate it"
+        },
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "Thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "userInDistress",
+      "examples": [
+        {
+          "text": "Help!"
+        },
+        {
+          "text": "Help me"
+        },
+        {
+          "text": "I'm being attacked"
+        },
+        {
+          "text": "I'm drowning"
+        },
+        {
+          "text": "I'm having an emergancy"
+        },
+        {
+          "text": "I'm in a crisis"
+        },
+        {
+          "text": "I need help"
+        },
+        {
+          "text": "Someone is breaking into my house"
+        }
+      ],
+      "description": "User is having an emergency that maybe isn't a bodily function"
+    },
+    {
       "intent": "vagueDiscomfort",
       "examples": [
+        {
+          "text": "bad"
+        },
         {
           "text": "Everything hurts"
         },
@@ -560,6 +833,9 @@
         },
         {
           "text": "I've been feeling okay"
+        },
+        {
+          "text": "I've felt shitty"
         },
         {
           "text": "not good"
@@ -592,16 +868,46 @@
           "text": "I feel like a million bucks"
         },
         {
+          "text": "i feel sexy"
+        },
+        {
           "text": "I'm doing good"
         },
         {
+          "text": "I'm doing ok"
+        },
+        {
+          "text": "I'm ok"
+        },
+        {
           "text": "im well"
+        },
+        {
+          "text": "I've been feeling fine"
+        },
+        {
+          "text": "I've felt sexy"
         },
         {
           "text": "I've felt well"
         }
       ],
       "description": "User says they are doing well but provides no other information"
+    },
+    {
+      "intent": "whoCreatedYou",
+      "examples": [
+        {
+          "text": "Who are your programmers?"
+        },
+        {
+          "text": "Who created you?"
+        },
+        {
+          "text": "Who made you?"
+        }
+      ],
+      "description": "Ask about the creators of Dr. Brutus"
     }
   ],
   "entities": [
@@ -769,6 +1075,14 @@
         },
         {
           "type": "synonyms",
+          "value": "slurred speech",
+          "synonyms": [
+            "hard to speak",
+            "slurred words"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "Sore throat",
           "synonyms": [
             "inflamed throat",
@@ -786,8 +1100,8 @@
             "queasiness",
             "queasy",
             "retching",
-            "sickness",
-            "throw up"
+            "throw up",
+            "upchuck"
           ]
         }
       ],
@@ -843,12 +1157,27 @@
       "values": [
         {
           "type": "synonyms",
+          "value": "doing really good",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "I'm awesome",
           "synonyms": []
         },
         {
           "type": "synonyms",
+          "value": "I'm doing really well",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
           "value": "I'm doing well",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "I'm fantastic",
           "synonyms": []
         },
         {
@@ -1017,6 +1346,15 @@
         },
         {
           "type": "synonyms",
+          "value": "suicide",
+          "synonyms": [
+            "suicidal actions",
+            "suicidal thoughts",
+            "thoughts of taking my own life"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "trouble breathing",
           "synonyms": [
             "pressure in chest"
@@ -1035,11 +1373,90 @@
       "fuzzy_match": true
     },
     {
+      "entity": "mentalHealthSymptom",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "am i going crazy",
+          "synonyms": [
+            "hallucinations ",
+            "schizophrenia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "anxiety",
+          "synonyms": [
+            "extreme fear",
+            "illogical fears",
+            "social anxiety",
+            "uncontrollable fear"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Constant fear",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "depression",
+          "synonyms": [
+            "big sad",
+            "dispair",
+            "sadness",
+            "uncontrollable crying",
+            "uncontrollable feelings of doubt and sadness"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "eating disorder",
+          "synonyms": [
+            "anorexia",
+            "bullemia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Extremely sad",
+          "synonyms": [
+            "extremely upset"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "My mental health has been really bad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "paranoia",
+          "synonyms": [
+            "conspiracy theories"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
       "entity": "nonCovidSymptom",
       "values": [
         {
           "type": "synonyms",
           "value": "bruising",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dizziness",
+          "synonyms": [
+            "confusion"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dry throat",
           "synonyms": []
         },
         {
@@ -1056,6 +1473,13 @@
           "type": "synonyms",
           "value": "hand",
           "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "heart burn",
+          "synonyms": [
+            "indegestion"
+          ]
         },
         {
           "type": "synonyms",
@@ -1080,6 +1504,11 @@
             "mentally ill",
             "stressed"
           ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Itching",
+          "synonyms": []
         },
         {
           "type": "synonyms",
@@ -1113,6 +1542,18 @@
           "type": "synonyms",
           "value": "sore feet",
           "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "STD",
+          "synonyms": [
+            "Chlamydia",
+            "Genital Warts",
+            "Gonorrhea",
+            "Hepatitis",
+            "herpes",
+            "Sexually transmitted diseases"
+          ]
         },
         {
           "type": "synonyms",
@@ -1184,6 +1625,26 @@
     },
     {
       "type": "standard",
+      "title": "User says thanks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No problem! If you develop new symptoms or have any new questions, you can come back to ask me more questions at any time!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thanks",
+      "dialog_node": "node_10_1604786348377",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
       "title": "Say hello",
       "output": {
         "generic": [
@@ -1191,10 +1652,16 @@
             "values": [
               {
                 "text": "Hey friend! What type of information can I give you about COVID-19?"
+              },
+              {
+                "text": "Hey! :) Are there any questions I can answer for you about COVID-19 or any medical symptoms you've been having?"
+              },
+              {
+                "text": "Nice to hear from you! What questions can I answer for you about COVID-19?"
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
       },
@@ -1266,7 +1733,7 @@
       },
       "conditions": "@nonCovidSymptom",
       "dialog_node": "node_1_1602729744547",
-      "previous_sibling": "node_3_1602785014899"
+      "previous_sibling": "node_3_1604782618785"
     },
     {
       "type": "standard",
@@ -1307,6 +1774,27 @@
       "conditions": "#PositiveResponse",
       "dialog_node": "node_1_1603046472902",
       "previous_sibling": "node_2_1602730653729"
+    },
+    {
+      "type": "standard",
+      "title": "User is dumb and says yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What were your symptoms specifically?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602616055289",
+      "conditions": "#PositiveResponse",
+      "dialog_node": "node_1_1604783981308",
+      "previous_sibling": "node_9_1604783904855"
     },
     {
       "type": "standard",
@@ -1394,7 +1882,73 @@
       },
       "conditions": "#AskIfDrBrutusIsRealDoctor",
       "dialog_node": "node_2_1604618137719",
-      "previous_sibling": "Welcome"
+      "previous_sibling": "node_4_1604618554364"
+    },
+    {
+      "type": "standard",
+      "title": "User in distress",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Get to the phone and dial 9-1-1 immediately, then get to a safe location. If you're experiencing a medical emergency, call an ambulance and stay put at your location."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#userInDistress",
+      "dialog_node": "node_2_1604783147269",
+      "previous_sibling": "node_2_1604784630223"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to question about covid-19 vs corona",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "COVID-19, also referred to as covid, corona, or coronavirus, is a newly discovered strain of coronavirus which has spread around the world rapidly and infected nearly 50 million people as of November 2020. \n10 Million of those infections are in the United States.\nMost people infected experience mild to moderate symptoms, however this allows the virus to spread faster without being detected. This is why social distancing, masks, and covid-testing are of immense importance.\nCommon myths about COVID-19 include that the virus was human made, which has been proven false, or that the virus is not infectious or dangerous to young people.\nFor more information on COVID-19 please visit cdc.gov."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#covidVSCorona",
+      "dialog_node": "node_2_1604784630223",
+      "previous_sibling": "node_8_1604785152061"
+    },
+    {
+      "type": "standard",
+      "title": "No Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602613425600",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_2_1604785456566",
+      "previous_sibling": "node_10_1602613491730"
     },
     {
       "type": "standard",
@@ -1451,6 +2005,135 @@
       "conditions": "@healthEmergancy",
       "dialog_node": "node_3_1602785014899",
       "previous_sibling": "node_4_1602729865071"
+    },
+    {
+      "type": "standard",
+      "title": "Report Creators",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I was created by four undergraduate students at The Ohio State University for their senior year capstone. Keep in mind I am NOT a medical professional! However I should be useful in helping you determine how concerned you should be about getting a test for COVID-19."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#whoCreatedYou",
+      "dialog_node": "node_3_1604775736191",
+      "previous_sibling": "node_3_1604778675049"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to inquiry about Dr. Brutus",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm doing well! Even so I make sure to social distance and check my temperature regularly for signs of fever. Let's keep talking about you!"
+              },
+              {
+                "text": "I'm feeling good today, go Bucks! How about yourself?"
+              },
+              {
+                "text": "I'm hanging in there! How are you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#inquireDrBrutusWellbeing",
+      "dialog_node": "node_3_1604778675049",
+      "previous_sibling": "node_5_1604779223396"
+    },
+    {
+      "type": "standard",
+      "title": "If user says they haven't had symptoms",
+      "parent": "node_8_1604780045162",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_3_1604780189933"
+    },
+    {
+      "type": "standard",
+      "title": "inquire about contact tracing",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok I'll take that into account."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1602618666866"
+      },
+      "conditions": "#ContactWithCOVIDPatient",
+      "dialog_node": "node_3_1604781030035",
+      "previous_sibling": "node_2_1604783147269"
+    },
+    {
+      "type": "standard",
+      "title": "Mental Health Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Though not something I'm equipped to help with, mental health is a serious issue. Please contact your doctor or schedule a meeting with a psychiatrist or therapist as soon as possible (many are taking online appointments!). If you are having suicidal thoughts, please call 9-1-1 immediately. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602729687154",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1602618666866"
+      },
+      "conditions": "@mentalHealthSymptom",
+      "dialog_node": "node_3_1604782618785",
+      "previous_sibling": "node_3_1602785014899"
+    },
+    {
+      "type": "standard",
+      "title": "User had one",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which symptom specifically?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602613491730",
+      "conditions": "#PositiveResponse",
+      "dialog_node": "node_3_1604785551554"
     },
     {
       "type": "standard",
@@ -1580,6 +2263,52 @@
     },
     {
       "type": "standard",
+      "title": "List Cold Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Signs of the common cold are:\n\n- Runny or stuff nose\n- Mild Cough\n- Fatigue\n- Sneezing\n- Watery eyes\n- Sore throat\n- Headaches\n- Aches and pains\n\nOne significant difference between the signs of the cold and covid-19 is that sneezing is a very common sign of the cold, but an uncommon symptom of covid-19. \nIf you are experiencing any of the above symptoms you may have the common cold. Keep in mind that many cold symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#listColdSymptoms",
+      "dialog_node": "node_4_1604618554364",
+      "previous_sibling": "node_6_1604619678844"
+    },
+    {
+      "type": "standard",
+      "title": "idk",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's ok!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602618666866",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1600810824990"
+      },
+      "conditions": "#IDontKnow",
+      "dialog_node": "node_4_1604780687403",
+      "previous_sibling": "node_5_1603047003088"
+    },
+    {
+      "type": "standard",
       "title": "Specific Medical",
       "parent": "node_8_1602618666866",
       "next_step": {
@@ -1590,6 +2319,92 @@
       "conditions": "#medical_symptoms_intents",
       "dialog_node": "node_5_1603047003088",
       "previous_sibling": "node_1_1603046472902"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to inquiry about testing locations",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, at the moment functionality to report your local COVID-19 testing location hasn't been added. However, many pharmacies and hospitals are equipped to test you. I suggest a quick search on google maps to find a location near you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#getTestingLocation",
+      "dialog_node": "node_5_1604779223396",
+      "previous_sibling": "node_8_1604780045162"
+    },
+    {
+      "type": "standard",
+      "title": "Football Topic",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I love the buckeyes! My favorite player is Justin Fields."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#football",
+      "dialog_node": "node_5_1604786151003",
+      "previous_sibling": "node_10_1604786348377"
+    },
+    {
+      "type": "standard",
+      "title": "List Flu Symptoms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Signs of the Flu are:\n\n- Fever and/or chills\n- Cough (usually dry)\n- Fatigue\n- Aches and pains\n- Runny or stuffy nose (sometimes)\n- Sore throat (sometimes)\n- Diarrhea (sometimes in children)\n\nIf you are experiencing any of the above symptoms you may have the flu. Keep in mind that many flu symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#listFluSymptoms",
+      "dialog_node": "node_6_1604619678844",
+      "previous_sibling": "node_3_1604775736191"
+    },
+    {
+      "type": "standard",
+      "title": "Respond to Vagueness - Good",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Glad you're not feeling too bad!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
+      "conditions": "#VaguePositiveStatement",
+      "dialog_node": "node_7_1602617827618",
+      "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
@@ -1605,19 +2420,45 @@
     },
     {
       "type": "standard",
+      "title": "None",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602613491730",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_7_1604785584277",
+      "previous_sibling": "node_3_1604785551554"
+    },
+    {
+      "type": "standard",
       "title": "Ask if user is feeling sick",
       "output": {
         "generic": [
           {
             "values": [
               {
-                "text": "Let's find out if you have Covid-19. What, if any, ways have you been ill recently?"
+                "text": "Let's find out if you have Covid-19. What, if any, specific ways have you been ill recently?"
               },
               {
                 "text": "How have you been feeling lately? Be specific."
               },
               {
-                "text": "Let's talk about COVID-19. Are you feeling sick?"
+                "text": "Let's talk about COVID-19. Are you feeling sick? If so, in what ways?"
               }
             ],
             "response_type": "text",
@@ -1640,17 +2481,17 @@
                 "text": "Have you experienced any other symptoms?"
               },
               {
-                "text": "Any other symptoms?"
+                "text": "Any other symptoms to report?"
               },
               {
-                "text": "What else has been going on?"
+                "text": "What else has been going on? Have you experienced any symptoms of COVID-19?"
               },
               {
-                "text": "Anything else to add?"
+                "text": "Anything else to add in regards to covid-19?"
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
       },
@@ -1695,7 +2536,7 @@
           {
             "values": [
               {
-                "text": "That's good! Make sure to wear a mask in public, avoid large gatherings, and stay at least 6 feet apart from others."
+                "text": "That's good! Make sure to wear a mask in public, avoid large gatherings, and stay at least 6 feet apart from others. Remember to come back to talk to me if you have any other symptoms to discuss!"
               }
             ],
             "response_type": "text",
@@ -1709,6 +2550,38 @@
       },
       "conditions": "#NegativeResponse",
       "dialog_node": "node_8_1604117082235"
+    },
+    {
+      "type": "standard",
+      "title": "User says idk",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Can you tell me about any symptoms of COVID-19 you might've had? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#IDontKnow",
+      "dialog_node": "node_8_1604780045162",
+      "previous_sibling": "node_3_1604781030035"
+    },
+    {
+      "type": "standard",
+      "title": "Jump to uncommon symptoms",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1602613491730"
+      },
+      "conditions": "#listUncommonSymptoms",
+      "dialog_node": "node_8_1604785152061",
+      "previous_sibling": "node_9_1604785912976"
     },
     {
       "type": "standard",
@@ -1757,6 +2630,72 @@
       "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
       "dialog_node": "node_9_1604117879981",
       "previous_sibling": "node_8_1604117082235"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Response",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's good. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602616055289",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1604117014252"
+      },
+      "conditions": "#NegativeResponse",
+      "dialog_node": "node_9_1604783904855"
+    },
+    {
+      "type": "standard",
+      "title": "Yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What were each of your symptoms, specifically?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602613425600",
+      "conditions": "#PositiveResponse",
+      "dialog_node": "node_9_1604785501919",
+      "previous_sibling": "node_2_1604785456566"
+    },
+    {
+      "type": "standard",
+      "title": "can a pet have covid?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "According to the CDC: A small number of pets worldwide, including cats and dogs, have been reported to be infected with the virus that causes COVID-19, mostly after close contact with people with COVID-19. Infected pets might get sick or they might not have any symptoms. Cats, dogs, and minks are among the animals known to be able to transmit COVID-19."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#canPetHaveCovid",
+      "dialog_node": "node_9_1604785912976",
+      "previous_sibling": "node_5_1604786151003"
     },
     {
       "type": "standard",
@@ -1814,3 +2753,4 @@
   "language": "en",
   "description": ""
 }
+
