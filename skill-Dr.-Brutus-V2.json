@@ -206,6 +206,9 @@
         },
         {
           "text": "What's wrong with me?"
+        },
+        {
+          "text": "Why is my head hurting"
         }
       ],
       "description": "User wants to know if they have covid, if they're sick. Basically they're being vague."
@@ -370,6 +373,9 @@
           "text": "Can I have a list of COVID symptoms?"
         },
         {
+          "text": "Can you tell me COVID symptoms"
+        },
+        {
           "text": "Covid symptoms are?"
         },
         {
@@ -481,7 +487,13 @@
           "text": "hurts"
         },
         {
+          "text": "I am not getting enough sleep and My nose broke while i was in a fight"
+        },
+        {
           "text": "I can't breathe"
+        },
+        {
+          "text": "I don't have a sore throat but I have a fever"
         },
         {
           "text": "I feel like a have a fever",
@@ -662,6 +674,9 @@
         },
         {
           "text": "I don't have a fever"
+        },
+        {
+          "text": "I don't have fever"
         },
         {
           "text": "I don't see any such symptoms"
@@ -1522,6 +1537,21 @@
         },
         {
           "type": "synonyms",
+          "value": "my hand hurts",
+          "synonyms": [
+            "my ear hurts",
+            "my ear is hurting",
+            "my feet are hurting",
+            "my foot is hurting",
+            "my foot is in pain",
+            "my hand is hurting",
+            "my hand is in pain",
+            "my nose hurts",
+            "my nose is hurting"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "nail",
           "synonyms": []
         },
@@ -1731,7 +1761,7 @@
         "selector": "body",
         "dialog_node": "node_8_1602618666866"
       },
-      "conditions": "@nonCovidSymptom",
+      "conditions": "@nonCovidSymptom || true",
       "dialog_node": "node_1_1602729744547",
       "previous_sibling": "node_3_1604782618785"
     },
@@ -2753,4 +2783,3 @@
   "language": "en",
   "description": ""
 }
-
