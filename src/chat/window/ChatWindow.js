@@ -65,7 +65,7 @@ class ChatWindow extends React.Component {
                         <ReactPlayer url="https://www.youtube.com/watch?v=DCdxsnRF1Fk&ab_channel=UpToDate"/>
                     </div>
                     <div className="Capabilities">
-                        <h3>{"Dr. Brutus Can help you:"}</h3>
+                        <h3>{"Dr. Brutus Can:"}</h3>
                         <ul> 
                             {drBCapabilities} 
                         </ul>
