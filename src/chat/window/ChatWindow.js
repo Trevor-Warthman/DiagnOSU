@@ -48,6 +48,8 @@ class ChatWindow extends React.Component {
                 this.props.dispatch(sendWatsonMessageAction(element));
             }));
     }
+    
+    drBCapabilities = ["Help you determine if you need a test for COVID-19","Give you more information about COVID-19","Inform you on symptoms of COVID-19, the flu, and the common cold","Talk about the buckeyes"]
 
     render() {
         return (
@@ -61,6 +63,12 @@ class ChatWindow extends React.Component {
                     </ChatWindowSidebar>
                     <div className="youtube">
                         <ReactPlayer url="https://www.youtube.com/watch?v=DCdxsnRF1Fk&ab_channel=UpToDate"/>
+                    </div>
+                    <div className="Capabilities">
+                        <h3>{Dr. Brutus Can help you:}</h3>
+                        <ul> 
+                            {drBCapabilities} 
+                        </ul>
                     </div>
                     <div className="chat-window">
                         <embedded_bot />
