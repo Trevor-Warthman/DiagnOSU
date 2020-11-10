@@ -655,13 +655,19 @@
       "description": "When the user replies \"no\" to a yes/no question"
     },
     {
-      "intent": "no_emergency_symptoms_intents",
+      "intent": "no_medical_symptoms",
       "examples": [
+        {
+          "text": "I am not coughing"
+        },
+        {
+          "text": "I don't have a fever"
+        },
         {
           "text": "I don't see any such symptoms"
         },
         {
-          "text": "I'm not having an emergancy"
+          "text": "No i don't have a headache"
         },
         {
           "text": "None of the above symptoms"
@@ -673,7 +679,7 @@
           "text": "No such symptoms on me"
         }
       ],
-      "description": "no Emergency symptoms"
+      "description": "When the user says they have no medical symptoms"
     },
     {
       "intent": "PositiveResponse",
@@ -1822,7 +1828,7 @@
         "selector": "body",
         "dialog_node": "node_4_1600810824990"
       },
-      "conditions": "#NegativeResponse",
+      "conditions": "#NegativeResponse || #no_medical_symptoms",
       "dialog_node": "node_2_1602730653729"
     },
     {
@@ -2500,7 +2506,16 @@
           {
             "values": [
               {
-                "text": "Have you been in contact with anyone who has tested positive for it in the past 14 days?"
+                "text": "Glad to hear you're doing well!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Let's talk about COVID-19. Have you been in contact with someone who's tested positive for it in the past 14 days?"
               }
             ],
             "response_type": "text",
@@ -2508,7 +2523,8 @@
           }
         ]
       },
-      "conditions": "#ContactWithCOVIDPatient",
+      "conditions": "#VaguePositiveStatement || #no_medical_symptoms",
+      "digress_in": "does_not_return",
       "dialog_node": "node_8_1604117014252",
       "previous_sibling": "node_7_1602617827618"
     },
