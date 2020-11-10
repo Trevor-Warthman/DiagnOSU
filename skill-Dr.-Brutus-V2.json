@@ -172,27 +172,6 @@
       "description": "If the user insults Dr. Brutus"
     },
     {
-      "intent": "listColdSymptoms",
-      "examples": [
-        {
-          "text": "Common Cold symptoms"
-        },
-        {
-          "text": "do I have the cold?"
-        },
-        {
-          "text": "How do cold symptoms compare to corona?"
-        },
-        {
-          "text": "How do cold symptoms compare to covid-19?"
-        },
-        {
-          "text": "What are symptoms of the cold"
-        }
-      ],
-      "description": ""
-    },
-    {
       "intent": "listCommonSymptoms",
       "examples": [
         {
@@ -221,24 +200,6 @@
         }
       ],
       "description": "User wants to see a listing of common COVID symptoms"
-    },
-    {
-      "intent": "listFluSymptoms",
-      "examples": [
-        {
-          "text": "Flu Symptoms"
-        },
-        {
-          "text": "How do Flu Symptoms compare to covid?"
-        },
-        {
-          "text": "What are Flu Symptoms"
-        },
-        {
-          "text": "What are signs of flu"
-        }
-      ],
-      "description": ""
     },
     {
       "intent": "listUncommonSymptoms",
@@ -472,13 +433,19 @@
       "description": "When the user replies \"no\" to a yes/no question"
     },
     {
-      "intent": "no_emergency_symptoms_intents",
+      "intent": "no_medical_symptoms",
       "examples": [
+        {
+          "text": "I am not coughing"
+        },
+        {
+          "text": "I don't have a fever"
+        },
         {
           "text": "I don't see any such symptoms"
         },
         {
-          "text": "I'm not having an emergancy"
+          "text": "No i don't have a headache"
         },
         {
           "text": "None of the above symptoms"
@@ -490,7 +457,7 @@
           "text": "No such symptoms on me"
         }
       ],
-      "description": "no Emergency symptoms"
+      "description": "When the user says they have no medical symptoms"
     },
     {
       "intent": "PositiveResponse",
@@ -1373,7 +1340,7 @@
         "selector": "body",
         "dialog_node": "node_4_1600810824990"
       },
-      "conditions": "#NegativeResponse",
+      "conditions": "#NegativeResponse || #no_medical_symptoms",
       "dialog_node": "node_2_1602730653729"
     },
     {
@@ -1427,7 +1394,7 @@
       },
       "conditions": "#AskIfDrBrutusIsRealDoctor",
       "dialog_node": "node_2_1604618137719",
-      "previous_sibling": "node_4_1604618554364"
+      "previous_sibling": "Welcome"
     },
     {
       "type": "standard",
@@ -1613,26 +1580,6 @@
     },
     {
       "type": "standard",
-      "title": "List Cold Symptoms",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Signs of the common cold are:\n\n- Runny or stuff nose\n- Mild Cough\n- Fatigue\n- Sneezing\n- Watery eyes\n- Sore throat\n- Headaches\n- Aches and pains\n\nOne significant difference between the signs of the cold and covid-19 is that sneezing is a very common sign of the cold, but an uncommon symptom of covid-19. \nIf you are experiencing any of the above symptoms you may have the common cold. Keep in mind that many cold symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "conditions": "#listColdSymptoms",
-      "dialog_node": "node_4_1604618554364",
-      "previous_sibling": "node_6_1604619678844"
-    },
-    {
-      "type": "standard",
       "title": "Specific Medical",
       "parent": "node_8_1602618666866",
       "next_step": {
@@ -1643,52 +1590,6 @@
       "conditions": "#medical_symptoms_intents",
       "dialog_node": "node_5_1603047003088",
       "previous_sibling": "node_1_1603046472902"
-    },
-    {
-      "type": "standard",
-      "title": "List Flu Symptoms",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Signs of the Flu are:\n\n- Fever and/or chills\n- Cough (usually dry)\n- Fatigue\n- Aches and pains\n- Runny or stuffy nose (sometimes)\n- Sore throat (sometimes)\n- Diarrhea (sometimes in children)\n\nIf you are experiencing any of the above symptoms you may have the flu. Keep in mind that many flu symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "conditions": "#listFluSymptoms",
-      "dialog_node": "node_6_1604619678844",
-      "previous_sibling": "Welcome"
-    },
-    {
-      "type": "standard",
-      "title": "Respond to Vagueness - Good",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Glad you're doing well! "
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "context": {},
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_8_1604117014252"
-      },
-      "conditions": "#VaguePositiveStatement",
-      "dialog_node": "node_7_1602617827618",
-      "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
@@ -1764,7 +1665,16 @@
           {
             "values": [
               {
-                "text": "Let's talk about COVID-19. Have you been in contact with anyone who has tested positive for it in the past 14 days?"
+                "text": "Glad to hear you're doing well!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Let's talk about COVID-19. Have you been in contact with someone who's tested positive for it in the past 14 days?"
               }
             ],
             "response_type": "text",
@@ -1772,9 +1682,10 @@
           }
         ]
       },
-      "conditions": "#ContactWithCOVIDPatient",
+      "conditions": "#VaguePositiveStatement || #no_medical_symptoms",
+      "digress_in": "does_not_return",
       "dialog_node": "node_8_1604117014252",
-      "previous_sibling": "node_7_1602617827618"
+      "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
