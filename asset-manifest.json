@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DiagnOSU/static/css/main.d9d9c815.chunk.css",
-    "main.js": "/DiagnOSU/static/js/main.f057c6d6.chunk.js",
-    "main.js.map": "/DiagnOSU/static/js/main.f057c6d6.chunk.js.map",
+    "main.js": "/DiagnOSU/static/js/main.275331e4.chunk.js",
+    "main.js.map": "/DiagnOSU/static/js/main.275331e4.chunk.js.map",
     "runtime-main.js": "/DiagnOSU/static/js/runtime-main.df422ff6.js",
     "runtime-main.js.map": "/DiagnOSU/static/js/runtime-main.df422ff6.js.map",
     "static/js/2.e3ba215a.chunk.js": "/DiagnOSU/static/js/2.e3ba215a.chunk.js",
     "static/js/2.e3ba215a.chunk.js.map": "/DiagnOSU/static/js/2.e3ba215a.chunk.js.map",
     "index.html": "/DiagnOSU/index.html",
-    "precache-manifest.d8f3e0b796a7dc6b7f772dc0ca96126f.js": "/DiagnOSU/precache-manifest.d8f3e0b796a7dc6b7f772dc0ca96126f.js",
+    "precache-manifest.f87566cf465e4f1046a204a57ae81d6f.js": "/DiagnOSU/precache-manifest.f87566cf465e4f1046a204a57ae81d6f.js",
     "service-worker.js": "/DiagnOSU/service-worker.js",
     "static/css/main.d9d9c815.chunk.css.map": "/DiagnOSU/static/css/main.d9d9c815.chunk.css.map",
     "static/js/2.e3ba215a.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.e3ba215a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.df422ff6.js",
     "static/js/2.e3ba215a.chunk.js",
     "static/css/main.d9d9c815.chunk.css",
-    "static/js/main.f057c6d6.chunk.js"
+    "static/js/main.275331e4.chunk.js"
   ]
 }
