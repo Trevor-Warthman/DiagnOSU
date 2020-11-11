@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DiagnOSU/static/css/main.d9d9c815.chunk.css",
+    "main.css": "/DiagnOSU/static/css/main.a5a36c74.chunk.css",
     "main.js": "/DiagnOSU/static/js/main.275331e4.chunk.js",
     "main.js.map": "/DiagnOSU/static/js/main.275331e4.chunk.js.map",
     "runtime-main.js": "/DiagnOSU/static/js/runtime-main.df422ff6.js",
@@ -8,15 +8,15 @@
     "static/js/2.e3ba215a.chunk.js": "/DiagnOSU/static/js/2.e3ba215a.chunk.js",
     "static/js/2.e3ba215a.chunk.js.map": "/DiagnOSU/static/js/2.e3ba215a.chunk.js.map",
     "index.html": "/DiagnOSU/index.html",
-    "precache-manifest.f87566cf465e4f1046a204a57ae81d6f.js": "/DiagnOSU/precache-manifest.f87566cf465e4f1046a204a57ae81d6f.js",
+    "precache-manifest.37466a7d1fd9a19493787ef7ce14f65c.js": "/DiagnOSU/precache-manifest.37466a7d1fd9a19493787ef7ce14f65c.js",
     "service-worker.js": "/DiagnOSU/service-worker.js",
-    "static/css/main.d9d9c815.chunk.css.map": "/DiagnOSU/static/css/main.d9d9c815.chunk.css.map",
+    "static/css/main.a5a36c74.chunk.css.map": "/DiagnOSU/static/css/main.a5a36c74.chunk.css.map",
     "static/js/2.e3ba215a.chunk.js.LICENSE.txt": "/DiagnOSU/static/js/2.e3ba215a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df422ff6.js",
     "static/js/2.e3ba215a.chunk.js",
-    "static/css/main.d9d9c815.chunk.css",
+    "static/css/main.a5a36c74.chunk.css",
     "static/js/main.275331e4.chunk.js"
   ]
 }
