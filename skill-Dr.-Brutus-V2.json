@@ -2412,32 +2412,6 @@
     },
     {
       "type": "standard",
-      "title": "Respond to Vagueness - Good",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Glad you're not feeling too bad!"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "context": {},
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_8_1604117014252"
-      },
-      "conditions": "#VaguePositiveStatement",
-      "dialog_node": "node_7_1602617827618",
-      "previous_sibling": "node_8_1602618666866"
-    },
-    {
-      "type": "standard",
       "parent": "node_4_1600810824990",
       "next_step": {
         "behavior": "jump_to",
@@ -2556,7 +2530,7 @@
       "conditions": "#VaguePositiveStatement || #no_medical_symptoms",
       "digress_in": "does_not_return",
       "dialog_node": "node_8_1604117014252",
-      "previous_sibling": "node_7_1602617827618"
+      "previous_sibling": "node_8_1602618666866"
     },
     {
       "type": "standard",
