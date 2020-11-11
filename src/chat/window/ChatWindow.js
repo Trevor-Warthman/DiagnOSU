@@ -7,6 +7,8 @@ import {connect} from "react-redux";
 import ReactPlayer from "react-player"
 import embedded_bot from "./embedded_bot"
 
+drBCapabilities = ["Help you determine if you need a test for COVID-19","Give you more information about COVID-19","Inform you on symptoms of COVID-19, the flu, and the common cold","Talk about the buckeyes"]
+
 class ChatWindow extends React.Component {
 
     constructor(props) {
@@ -48,8 +50,6 @@ class ChatWindow extends React.Component {
                 this.props.dispatch(sendWatsonMessageAction(element));
             }));
     }
-    
-    drBCapabilities = ["Help you determine if you need a test for COVID-19","Give you more information about COVID-19","Inform you on symptoms of COVID-19, the flu, and the common cold","Talk about the buckeyes"]
 
     render() {
         return (
