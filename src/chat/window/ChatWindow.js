@@ -67,7 +67,10 @@ class ChatWindow extends React.Component {
                     <div className="Capabilities">
                         <h3>{"Dr. Brutus Can:"}</h3>
                         <ul> 
-                            {drBCapabilities} 
+                            <li>{drBCapabilities[0]}</li>
+                            <li>{drBCapabilities[1]}</li>
+                            <li>{drBCapabilities[2]}</li>
+                            <li>{drBCapabilities[3]}</li>
                         </ul>
                     </div>
                     <div className="chat-window">
