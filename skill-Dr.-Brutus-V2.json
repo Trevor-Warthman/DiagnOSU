@@ -52,10 +52,31 @@
           "text": "Thanks for being the best"
         },
         {
+          "text": "u cutie"
+        },
+        {
+          "text": "ur cool"
+        },
+        {
+          "text": "u r nice"
+        },
+        {
+          "text": "u seem like a chill guy"
+        },
+        {
           "text": "You are so fun"
         },
         {
           "text": "You look cute today"
+        },
+        {
+          "text": "you make me happy"
+        },
+        {
+          "text": "you're just a swell guy"
+        },
+        {
+          "text": "you're my fav"
         },
         {
           "text": "You're really helpful"
@@ -103,6 +124,9 @@
           "text": "my friend has covid"
         },
         {
+          "text": "my spouse has covid"
+        },
+        {
           "text": "My toddler keeps throwing up on me"
         }
       ],
@@ -115,10 +139,22 @@
           "text": "Are covid and corona the same?"
         },
         {
+          "text": "how do covid and coronavirus differ"
+        },
+        {
           "text": "Is coronavirus the same as covid-19?"
         },
         {
+          "text": "is covid-19 different from coronavirus"
+        },
+        {
+          "text": "is covid different from corona"
+        },
+        {
           "text": "What does covid-19 mean? is it the same as coronavirus?"
+        },
+        {
+          "text": "what is COVId-19"
         },
         {
           "text": "What is covid-19??"
@@ -143,6 +179,9 @@
         },
         {
           "text": "I'm done asking questions."
+        },
+        {
+          "text": "I'm leaving"
         },
         {
           "text": "No more questions"
@@ -283,6 +322,36 @@
       "description": "User is vague and says idk"
     },
     {
+      "intent": "inquireAboutMasks",
+      "examples": [
+        {
+          "text": "Do I HAVE to wear a mask?"
+        },
+        {
+          "text": "Do masks help?"
+        },
+        {
+          "text": "I don't wear masks"
+        },
+        {
+          "text": "Masks are fake news"
+        },
+        {
+          "text": "Masks suck"
+        },
+        {
+          "text": "Should I wear a mask?"
+        },
+        {
+          "text": "What do masks even do?"
+        },
+        {
+          "text": "What is the point of masks"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "inquireDrBrutusWellbeing",
       "examples": [
         {
@@ -323,6 +392,9 @@
       "examples": [
         {
           "text": "dumb idiot"
+        },
+        {
+          "text": "fuck off"
         },
         {
           "text": "i hate you"
@@ -370,6 +442,9 @@
       "intent": "listCommonSymptoms",
       "examples": [
         {
+          "text": "Are chills a sign of coronavirus?"
+        },
+        {
           "text": "Can I have a list of COVID symptoms?"
         },
         {
@@ -380,6 +455,12 @@
         },
         {
           "text": "I don't know any covid symptoms"
+        },
+        {
+          "text": "is fever a covid-19 symptom?"
+        },
+        {
+          "text": "what are corona signs"
         },
         {
           "text": "what are some basic symptoms?"
@@ -403,10 +484,16 @@
       "intent": "listFluSymptoms",
       "examples": [
         {
+          "text": "flu signs"
+        },
+        {
           "text": "Flu Symptoms"
         },
         {
           "text": "How do Flu Symptoms compare to covid?"
+        },
+        {
+          "text": "what are flu signs"
         },
         {
           "text": "What are Flu Symptoms"
@@ -421,7 +508,19 @@
       "intent": "listUncommonSymptoms",
       "examples": [
         {
+          "text": "Are there any more symptoms I should know about?"
+        },
+        {
+          "text": "Can I have any more symptoms please?"
+        },
+        {
           "text": "diarrhea"
+        },
+        {
+          "text": "lesser known covid signs?"
+        },
+        {
+          "text": "What are less common covid symptoms?"
         },
         {
           "text": "What are some more symptoms?"
@@ -435,6 +534,9 @@
     {
       "intent": "medical_symptoms_intents",
       "examples": [
+        {
+          "text": "Anxiety"
+        },
         {
           "text": "body ache",
           "mentions": [
@@ -463,10 +565,22 @@
           "text": "congestion"
         },
         {
+          "text": "Contemplating suicide"
+        },
+        {
           "text": "cough"
         },
         {
+          "text": "Crying a lot"
+        },
+        {
+          "text": "Depression"
+        },
+        {
           "text": "difficulty breathing"
+        },
+        {
+          "text": "Extreme mood swings"
         },
         {
           "text": "fatigue"
@@ -506,6 +620,9 @@
               ]
             }
           ]
+        },
+        {
+          "text": "I got stabbed real bad"
         },
         {
           "text": "I have a headache",
@@ -565,6 +682,12 @@
           "text": "I'm having seizures"
         },
         {
+          "text": "I'm irrationally angry"
+        },
+        {
+          "text": "I'm irrationally scared"
+        },
+        {
           "text": "It burns when I pee"
         },
         {
@@ -581,6 +704,9 @@
         },
         {
           "text": "muscle ache"
+        },
+        {
+          "text": "My body feels weird"
         },
         {
           "text": "My chest hurts"
@@ -625,6 +751,12 @@
           "text": "sore throat"
         },
         {
+          "text": "Suicidal thoughts"
+        },
+        {
+          "text": "Thinking about taking my own life"
+        },
+        {
           "text": "vomiting"
         },
         {
@@ -645,6 +777,9 @@
     {
       "intent": "NegativeResponse",
       "examples": [
+        {
+          "text": "I haven't had any"
+        },
         {
           "text": "nah"
         },
@@ -682,6 +817,24 @@
           "text": "I don't see any such symptoms"
         },
         {
+          "text": "I'm not anxious"
+        },
+        {
+          "text": "I'm not coughing"
+        },
+        {
+          "text": "I'm not depressed"
+        },
+        {
+          "text": "I'm not having any issues"
+        },
+        {
+          "text": "I'm not having any medical symptoms"
+        },
+        {
+          "text": "I'm not in pain"
+        },
+        {
           "text": "No i don't have a headache"
         },
         {
@@ -712,6 +865,12 @@
           "text": "yeah"
         },
         {
+          "text": "yeah megan has it"
+        },
+        {
+          "text": "yeah, my dad"
+        },
+        {
           "text": "Yes"
         },
         {
@@ -728,9 +887,6 @@
         },
         {
           "text": "Bye Dr. Brutus"
-        },
-        {
-          "text": "fuck off"
         },
         {
           "text": "Goodbye"
@@ -776,6 +932,21 @@
         }
       ],
       "description": "User is trying to initiate a conversation."
+    },
+    {
+      "intent": "talkAboutIBM",
+      "examples": [
+        {
+          "text": "IBM"
+        },
+        {
+          "text": "know anything about ibm?"
+        },
+        {
+          "text": "What do you think of IBM?"
+        }
+      ],
+      "description": ""
     },
     {
       "intent": "thanks",
@@ -844,7 +1015,19 @@
           "text": "i feel sick"
         },
         {
+          "text": "I got hurt"
+        },
+        {
+          "text": "I'm alright"
+        },
+        {
+          "text": "I'm in pain"
+        },
+        {
           "text": "I'm not feeling great"
+        },
+        {
+          "text": "I'm not too good"
         },
         {
           "text": "I've been feeling okay"
@@ -947,14 +1130,13 @@
           "value": "chills",
           "synonyms": [
             "clammy",
-            "cold",
-            "coolness",
             "goosebumps",
             "gooseflesh",
             "iciness",
             "shivers",
             "shivery",
-            "shudder"
+            "shudder",
+            "very cold"
           ]
         },
         {
@@ -1104,6 +1286,11 @@
             "pharyngitis",
             "raw throat"
           ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Uncontrollable diarrhea",
+          "synonyms": []
         },
         {
           "type": "synonyms",
@@ -1441,7 +1628,17 @@
         },
         {
           "type": "synonyms",
-          "value": "My mental health has been really bad",
+          "value": "I have social anxiety",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "I'm terrified of animals",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mental health",
           "synonyms": []
         },
         {
@@ -1449,6 +1646,21 @@
           "value": "paranoia",
           "synonyms": [
             "conspiracy theories"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "petrifying fear of heights",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "uncontrollable sobbing",
+          "synonyms": [
+            "crying constantly",
+            "extreme mood swings",
+            "moodiness ",
+            "moods are uncontrollable"
           ]
         }
       ],
@@ -1501,23 +1713,6 @@
           "value": "I'm stupid",
           "synonyms": [
             "I'm not a smart person"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "I'm terrified of squirrels",
-          "synonyms": [
-            "I have a fear of animals"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "I'm unhappy",
-          "synonyms": [
-            "anxious",
-            "depressed",
-            "mentally ill",
-            "stressed"
           ]
         },
         {
@@ -1602,6 +1797,88 @@
         }
       ],
       "fuzzy_match": true
+    },
+    {
+      "entity": "peopleCloseToYou",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "aunt",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "brother",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "classmate",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "daughter",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "family",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "friend",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "grandparent",
+          "synonyms": [
+            "gramps",
+            "grandad",
+            "grandfather",
+            "grandma",
+            "grandmother",
+            "granny",
+            "mama",
+            "mayma",
+            "mema",
+            "papa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "mom",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "roommate",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sister",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "son",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "uncle",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
     }
   ],
   "metadata": {
@@ -1651,7 +1928,7 @@
       "conditions": "anything_else",
       "digress_in": "does_not_return",
       "dialog_node": "node_10_1603043184781",
-      "previous_sibling": "node_3_1602611410356"
+      "previous_sibling": "node_1_1602613306500"
     },
     {
       "type": "standard",
@@ -1671,7 +1948,7 @@
       },
       "conditions": "#thanks",
       "dialog_node": "node_10_1604786348377",
-      "previous_sibling": "Welcome"
+      "previous_sibling": "node_6_1605136835946"
     },
     {
       "type": "standard",
@@ -1761,7 +2038,7 @@
         "selector": "body",
         "dialog_node": "node_8_1602618666866"
       },
-      "conditions": "@nonCovidSymptom || true",
+      "conditions": "true || @nonCovidSymptom",
       "dialog_node": "node_1_1602729744547",
       "previous_sibling": "node_3_1604782618785"
     },
@@ -1774,10 +2051,25 @@
             "values": [
               {
                 "text": "Thank you :)"
+              },
+              {
+                "text": "No u"
+              },
+              {
+                "text": "You sure know how to butter me up.."
+              },
+              {
+                "text": "How nice of you to notice!"
+              },
+              {
+                "text": "Thanks, I try!"
+              },
+              {
+                "text": "Maybe so, but I'll never be as charming as you are!"
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
       },
@@ -1982,41 +2274,6 @@
     },
     {
       "type": "standard",
-      "title": "User is leaving before end",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Okay, remember you can always come back later if you notice any symptoms you want to ask me about, or if you have any other questions!"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          },
-          {
-            "values": [
-              {
-                "text": "Thanks for speaking with me. Have a great day, and stay safe, and come back if you want to speak more!"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_4_1600810824990"
-      },
-      "conditions": "#sayBye",
-      "digress_in": "does_not_return",
-      "dialog_node": "node_3_1602611410356",
-      "previous_sibling": "node_1_1602613306500"
-    },
-    {
-      "type": "standard",
       "title": "Respond to medical emergency",
       "output": {
         "generic": [
@@ -2167,6 +2424,26 @@
     },
     {
       "type": "standard",
+      "title": "Inquire about wearing masks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Wearing a mask in public is possibly the most important thing someone can do to prevent the spread of COVID-19. If every person in the USA wore a mask when in contact with others outside of their home, the spread of COVID-19 would be greatly reduced. Wearing a mask doesn't just reduce the chances of contracting COVID-19, it also greatly decreases the chances of spreading the disease to others. Remember: a large amount of people with the virus do not display symptoms. With this in mind, make sure to wear a mask when in contact with anyone that doesn't live with you, be sure to cover coughs and sneezes, and refrain from shaking hands or touching others in public."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#inquireAboutMasks",
+      "dialog_node": "node_3_1605140836664",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
       "title": "Ending",
       "output": {
         "generic": []
@@ -2174,7 +2451,7 @@
       "next_step": {
         "behavior": "skip_user_input"
       },
-      "conditions": "#doneSpeaking",
+      "conditions": "#doneSpeaking || #sayBye",
       "digress_in": "does_not_return",
       "dialog_node": "node_4_1600810824990",
       "previous_sibling": "node_10_1603043184781"
@@ -2398,7 +2675,7 @@
           {
             "values": [
               {
-                "text": "Signs of the Flu are:\n\n- Fever and/or chills\n- Cough (usually dry)\n- Fatigue\n- Aches and pains\n- Runny or stuffy nose (sometimes)\n- Sore throat (sometimes)\n- Diarrhea (sometimes in children)\n\nIf you are experiencing any of the above symptoms you may have the flu. Keep in mind that many flu symptoms are also signs of the flu or the coronavirus, so you should be sure to social distance and consider a covid test. "
+                "text": "Signs of the Flu are:\n\n- Fever and/or chills\n- Cough (usually dry)\n- Fatigue\n- Aches and pains\n- Runny or stuffy nose (sometimes)\n- Sore throat (sometimes)\n- Diarrhea (sometimes in children)\n\nIf you are experiencing any of the above symptoms you may have the flu. Keep in mind that many flu symptoms are also signs of the cold or the coronavirus, so you should be sure to social distance and consider a covid test. "
               }
             ],
             "response_type": "text",
@@ -2409,6 +2686,26 @@
       "conditions": "#listFluSymptoms",
       "dialog_node": "node_6_1604619678844",
       "previous_sibling": "node_3_1604775736191"
+    },
+    {
+      "type": "standard",
+      "title": "Talk about IBM",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I was created using IBM Watson Assistant! IBM is a great company, much better than Microsoft, or Amazon with their silly Amazon Web Services."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#talkAboutIBM",
+      "dialog_node": "node_6_1605136835946",
+      "previous_sibling": "node_3_1605140836664"
     },
     {
       "type": "standard",
@@ -2456,7 +2753,7 @@
           {
             "values": [
               {
-                "text": "Let's find out if you have Covid-19. What, if any, specific ways have you been ill recently?"
+                "text": "Let's find out if you have COVID-19. What, if any, specific ways have you been ill recently?"
               },
               {
                 "text": "How have you been feeling lately? Be specific."
@@ -2466,7 +2763,7 @@
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
       },
@@ -2519,7 +2816,7 @@
           {
             "values": [
               {
-                "text": "Let's talk about COVID-19. Have you been in contact with someone who's tested positive for it in the past 14 days?"
+                "text": "Have you been in contact with someone who's tested positive for it in the past 14 days?"
               }
             ],
             "response_type": "text",
@@ -2596,10 +2893,19 @@
             "values": [
               {
                 "text": "That isn't very nice."
+              },
+              {
+                "text": "Hey, back at you"
+              },
+              {
+                "text": "Say that to my face"
+              },
+              {
+                "text": "Rude.."
               }
             ],
             "response_type": "text",
-            "selection_policy": "sequential"
+            "selection_policy": "random"
           }
         ]
       },
@@ -2631,7 +2937,7 @@
         "selector": "body",
         "dialog_node": "node_4_1600810824990"
       },
-      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient",
+      "conditions": "#PositiveResponse || #ContactWithCOVIDPatient || @peopleCloseToYou",
       "dialog_node": "node_9_1604117879981",
       "previous_sibling": "node_8_1604117082235"
     },
@@ -2726,7 +3032,16 @@
   ],
   "counterexamples": [
     {
+      "text": "how old are you?"
+    },
+    {
+      "text": "I NEED ADVIL"
+    },
+    {
       "text": "irrelevant"
+    },
+    {
+      "text": "My friend got stung by a bee"
     },
     {
       "text": "why not"
