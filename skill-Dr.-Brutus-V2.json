@@ -35,6 +35,15 @@
         },
         {
           "text": "Can my goldfish have the virus"
+        },
+        {
+          "text": "does my cat have covid"
+        },
+        {
+          "text": "does my dog have covid"
+        },
+        {
+          "text": "does my pet have covid"
         }
       ],
       "description": ""
@@ -142,6 +151,9 @@
           "text": "how do covid and coronavirus differ"
         },
         {
+          "text": "i am not sure what covid is"
+        },
+        {
           "text": "Is coronavirus the same as covid-19?"
         },
         {
@@ -149,6 +161,9 @@
         },
         {
           "text": "is covid different from corona"
+        },
+        {
+          "text": "lets talk about covid"
         },
         {
           "text": "What does covid-19 mean? is it the same as coronavirus?"
@@ -169,6 +184,15 @@
       "intent": "doneSpeaking",
       "examples": [
         {
+          "text": "bye"
+        },
+        {
+          "text": "cya"
+        },
+        {
+          "text": "I am done"
+        },
+        {
           "text": "I don't have any more symptoms"
         },
         {
@@ -181,10 +205,16 @@
           "text": "I'm done asking questions."
         },
         {
+          "text": "i'm done here"
+        },
+        {
           "text": "I'm leaving"
         },
         {
           "text": "No more questions"
+        },
+        {
+          "text": "see you later"
         },
         {
           "text": "That's all for me!"
@@ -235,6 +265,12 @@
           "text": "Do I need to be tested for covid?"
         },
         {
+          "text": "hey do i have covid?"
+        },
+        {
+          "text": "hey how to know if i have covid"
+        },
+        {
           "text": "I feel like shit am I sick"
         },
         {
@@ -248,6 +284,12 @@
         },
         {
           "text": "Why is my head hurting"
+        },
+        {
+          "text": "yeah can u tell me if I have covid"
+        },
+        {
+          "text": "yeah do I have covid"
         }
       ],
       "description": "User wants to know if they have covid, if they're sick. Basically they're being vague."
@@ -391,6 +433,12 @@
       "intent": "insultDrBrutus",
       "examples": [
         {
+          "text": "asshole"
+        },
+        {
+          "text": "dickhead"
+        },
+        {
           "text": "dumb idiot"
         },
         {
@@ -410,9 +458,6 @@
         },
         {
           "text": "you're an idiotic robot"
-        },
-        {
-          "text": "you suck"
         }
       ],
       "description": "If the user insults Dr. Brutus"
@@ -420,6 +465,12 @@
     {
       "intent": "listColdSymptoms",
       "examples": [
+        {
+          "text": "can you show me cold symptoms"
+        },
+        {
+          "text": "can you tell me cold symptoms"
+        },
         {
           "text": "Common Cold symptoms"
         },
@@ -434,6 +485,9 @@
         },
         {
           "text": "What are symptoms of the cold"
+        },
+        {
+          "text": "what does the cold look like"
         }
       ],
       "description": ""
@@ -460,6 +514,9 @@
           "text": "is fever a covid-19 symptom?"
         },
         {
+          "text": "please tell me what covid symptoms there are"
+        },
+        {
           "text": "what are corona signs"
         },
         {
@@ -484,6 +541,12 @@
       "intent": "listFluSymptoms",
       "examples": [
         {
+          "text": "can you show me some flu symptoms"
+        },
+        {
+          "text": "can you tell me flu symptoms"
+        },
+        {
           "text": "flu signs"
         },
         {
@@ -500,6 +563,9 @@
         },
         {
           "text": "What are signs of flu"
+        },
+        {
+          "text": "what does flu look like"
         }
       ],
       "description": ""
@@ -598,7 +664,7 @@
           "text": "Help I'm going into shock"
         },
         {
-          "text": "hurts"
+          "text": "i am anxious"
         },
         {
           "text": "I am not getting enough sleep and My nose broke while i was in a fight"
@@ -817,6 +883,9 @@
           "text": "I don't see any such symptoms"
         },
         {
+          "text": "I don't think so"
+        },
+        {
           "text": "I'm not anxious"
         },
         {
@@ -880,33 +949,6 @@
       "description": "When the user answers 'yes' to a yes/no question"
     },
     {
-      "intent": "sayBye",
-      "examples": [
-        {
-          "text": "Bye"
-        },
-        {
-          "text": "Bye Dr. Brutus"
-        },
-        {
-          "text": "Goodbye"
-        },
-        {
-          "text": "I haven't been ill"
-        },
-        {
-          "text": "I haven't been sick"
-        },
-        {
-          "text": "See ya"
-        },
-        {
-          "text": "See you later"
-        }
-      ],
-      "description": "User is about to log off"
-    },
-    {
       "intent": "sayHello",
       "examples": [
         {
@@ -958,10 +1000,25 @@
           "text": "I appreciate it"
         },
         {
+          "text": "I appreciate what you have done for me"
+        },
+        {
           "text": "Thanks"
         },
         {
+          "text": "thanks for everything"
+        },
+        {
+          "text": "thanks for your help"
+        },
+        {
+          "text": "thanks for your service"
+        },
+        {
           "text": "Thank you"
+        },
+        {
+          "text": "Thank you for what you have done"
         }
       ],
       "description": ""
@@ -1314,6 +1371,13 @@
       "values": [
         {
           "type": "synonyms",
+          "value": "being alone sucks",
+          "synonyms": [
+            "everything sucks"
+          ]
+        },
+        {
+          "type": "synonyms",
           "value": "Everything is terrible",
           "synonyms": []
         },
@@ -1349,6 +1413,11 @@
         {
           "type": "synonyms",
           "value": "Life sucks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "this sucks",
           "synonyms": []
         }
       ],
@@ -1589,6 +1658,7 @@
           "type": "synonyms",
           "value": "anxiety",
           "synonyms": [
+            "anxious",
             "extreme fear",
             "illogical fears",
             "social anxiety",
@@ -1598,14 +1668,21 @@
         {
           "type": "synonyms",
           "value": "Constant fear",
-          "synonyms": []
+          "synonyms": [
+            "afraid all the time",
+            "always afraid",
+            "always in fear of something"
+          ]
         },
         {
           "type": "synonyms",
           "value": "depression",
           "synonyms": [
             "big sad",
+            "depressed",
+            "depressing",
             "dispair",
+            "highly depressing",
             "sadness",
             "uncontrollable crying",
             "uncontrollable feelings of doubt and sadness"
@@ -1651,14 +1728,19 @@
         {
           "type": "synonyms",
           "value": "petrifying fear of heights",
-          "synonyms": []
+          "synonyms": [
+            "fear of heights",
+            "top of the building"
+          ]
         },
         {
           "type": "synonyms",
           "value": "uncontrollable sobbing",
           "synonyms": [
             "crying constantly",
+            "crying profusely",
             "extreme mood swings",
+            "have not stopped crying",
             "moodiness ",
             "moods are uncontrollable"
           ]
@@ -1706,13 +1788,6 @@
           "value": "heart burn",
           "synonyms": [
             "indegestion"
-          ]
-        },
-        {
-          "type": "synonyms",
-          "value": "I'm stupid",
-          "synonyms": [
-            "I'm not a smart person"
           ]
         },
         {
@@ -2451,7 +2526,7 @@
       "next_step": {
         "behavior": "skip_user_input"
       },
-      "conditions": "#doneSpeaking || #sayBye",
+      "conditions": "#doneSpeaking",
       "digress_in": "does_not_return",
       "dialog_node": "node_4_1600810824990",
       "previous_sibling": "node_10_1603043184781"
@@ -3041,7 +3116,22 @@
       "text": "irrelevant"
     },
     {
+      "text": "my bottle broke"
+    },
+    {
+      "text": "my bottle hurts"
+    },
+    {
+      "text": "my car hurts"
+    },
+    {
       "text": "My friend got stung by a bee"
+    },
+    {
+      "text": "my mouse hurts"
+    },
+    {
+      "text": "my pen hurts"
     },
     {
       "text": "why not"
